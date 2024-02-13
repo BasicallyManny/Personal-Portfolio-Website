@@ -4,7 +4,6 @@
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
@@ -28,8 +27,9 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  padding: 0 !important;
+  width: 100%;
+  height: 100%;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -70,3 +70,9 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
