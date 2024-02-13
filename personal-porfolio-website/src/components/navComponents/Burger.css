@@ -75,7 +75,14 @@
                 text-decoration: none;
                 color: white;
                 font-weight: 300;
+                background: linear-gradient(currentColor, currentColor) bottom / 0 .1em no-repeat;
+                transition: 1s background-size;
             }
+
+            a:hover {
+                background-size: 100% .1em;
+            }
+            
             
         }
     }
