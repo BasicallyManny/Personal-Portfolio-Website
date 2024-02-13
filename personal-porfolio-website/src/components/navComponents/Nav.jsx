@@ -8,6 +8,10 @@ import { menuSlide } from "../constants/anime"
 //Navigation Elements
 const navItems=[
     {
+        title:"Home",
+        href:"/Home"
+    },
+    {
       title:"About",
       href:"/About",
     },
