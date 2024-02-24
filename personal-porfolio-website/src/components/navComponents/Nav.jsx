@@ -39,7 +39,7 @@ const navItems=[
           exit='exit'
           className="menu"
           >
-              <div className="body !z-50">
+              <div className="body">
                   <div className="nav">
                       <div className="header">
                           <p>Navigation</p>
