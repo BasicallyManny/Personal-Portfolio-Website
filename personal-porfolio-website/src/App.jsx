@@ -4,7 +4,7 @@ import Navbar from './components/Navbar.jsx'
 import Home from './components/Home.jsx'
 import About from './components/About.jsx'
 import Skills from './components/Skills.jsx'
-//import Projects from './components/Projects'
+import Projects from './components/Projects'
 //import Contact from './components/Contact'
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
       <Home></Home>
       <About></About>
       <Skills></Skills>
+      <Projects></Projects>
     </main>
   )
 }
