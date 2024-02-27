@@ -1,5 +1,6 @@
 import ProjectCard from "./projectComponents/ProjectCard";
 import { Container, Row, Col } from "react-bootstrap";
+import  "../components/projectComponents/projectStyles.css";
 /*** Import images from Assets folder*/
 import cpu from "../../src/assets/Project Images/cpu.jpg"
 import Kami from "../../src/assets/Project Images/Kami.PNG"
@@ -8,15 +9,15 @@ import SpaceTime from "../../src/assets/Project Images/SpaceTime.PNG"
 
 export default function Projects(){
     return(
-        <Container fluid className="project-section">
+        <Container fluid className="!relative !pt-12 !pl-6 !pr-6 !h-auto ">
             <Container>
-                <h1 className="project-heading">
+                <h1 className="!pt-2.5 !text-4xl !font-medium !text-white">
                     My Recent <strong className="purple">Works </strong>
                 </h1>
-                <p style={{ color: "white" }}>
+                <p className="text-white">
                     Here are a few projects I worked on recently.
                 </p>
-                <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+                <Row className="justify-center pb-2.5">
                     <Col md={4} className="project-card">
                         <ProjectCard
                         imgPath={cpu}
