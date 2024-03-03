@@ -1,5 +1,7 @@
 import ProjectCard from "./projectComponents/ProjectCard";
-import { Container, Row, Col } from "react-bootstrap";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import  "../components/projectComponents/projectStyles.css";
 /*** Import images from Assets folder*/
 import cpu from "../../src/assets/Project Images/cpu.jpg"
@@ -11,13 +13,14 @@ export default function Projects(){
     return(
         <Container fluid className="!relative !pt-12 !pl-6 !pr-6 !h-auto ">
             <Container>
-                <h1 className="!pt-2.5 !text-4xl !font-medium !text-white">
-                    My Recent <strong className="purple">Works </strong>
+                <h1 className="!pt-2.5 !text-4xl !font-medium">
+                    My Recent <strong className="">Works </strong>
                 </h1>
-                <p className="text-white">
+                <p className="">
                     Here are a few projects I worked on recently.
                 </p>
-                <Row className="justify-center pb-2.5">
+                <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+
                     <Col md={4} className="project-card">
                         <ProjectCard
                         imgPath={cpu}
@@ -45,8 +48,8 @@ export default function Projects(){
                         ghLink="https://github.com/BasicallyManny/SpaceTime-Web-APP"
                         />
                     </Col>
-        </Row>
-      </Container>
-    </Container>
+                </Row>
+            </Container>
+        </Container>
     );
 }

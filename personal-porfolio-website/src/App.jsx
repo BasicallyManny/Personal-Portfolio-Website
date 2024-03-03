@@ -1,5 +1,6 @@
 import './App.css'
 import "./index.css"
+import 'bootstrap/dist/css/bootstrap.min.css' //import bootstrap styles
 import Navbar from './components/Navbar.jsx'
 import Home from './components/Home.jsx'
 import About from './components/About.jsx'

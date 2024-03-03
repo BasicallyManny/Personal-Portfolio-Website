@@ -12,7 +12,7 @@ export default function AboutCard(){
                         <Card>
                             <Card.Body>
                                 <blockquote className="mb-0">
-                                    <p style={{ textAlign: "justify" }} className=" italic subpixel-antialiased text-lg !z-10 pl-16 pr-16 !mt-5"> 
+                                    <p style={{ textAlign: "justify" }} className=" italic subpixel-antialiased text-lg z-10 pl-16 pr-16 !mt-5"> 
                                       I am a student currently attending the <span className="color--purple"><strong>University at Albany </strong></span> 
                                       with a passion for everything technical and pursuing my dreams of becomeing an Developer. Over the past four years, 
                                       I have consciously cultivated my programming capabilities across several programming languages and front-end web 

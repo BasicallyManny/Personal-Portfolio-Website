@@ -6,7 +6,7 @@ import './projectStyles.css';
 
 export default function ProjectCards(props) {
   return (
-    <section id="ProjectCards" style={{width:'33.33%'}}>
+    <section id="ProjectCards">
       <Card className="project-card-view">
       <Card.Img variant="top" src={props.imgPath} alt="card-img" className="!object-fill !w-full" />
       <Card.Body>
