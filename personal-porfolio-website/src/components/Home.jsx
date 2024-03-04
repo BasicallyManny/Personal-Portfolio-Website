@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Particle from './constants/Particles';
 import Type from "./homeComponents/Type";
 import '../components/aboutComponents/about.css';
+import {AiFillGithub,AiFillInstagram,AiFillTwitterCircle  } from "react-icons/ai";
 
 
 export default function Home(){
@@ -18,6 +19,42 @@ export default function Home(){
                             <div style={{ padding: 48, textAlign: "left" }}>
                                 <Type></Type>
                             </div>
+                        </Col>  
+                    </Row>
+
+                    <Row className="!justify-center !pt-7 !mt-12">
+                        <Col md={12} className=" home-about-social !justify-center text-center pt-7">
+                            <h1>FIND ME ON</h1>
+                            <p>Feel free to <span className="">connect </span>with me</p>
+                            <ul className="home-about-social-links">
+                                <li className="social-icons">
+                                    <a
+                                    href="https://github.com/BasicallyManny"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="icon-colour  home-social-icons">
+                                        <AiFillGithub size={40}/>
+                                    </a>
+                                </li>
+                                <li className="social-icons">
+                                    <a
+                                    href="https://twitter.com/WackBasically"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="icon-colour  home-social-icons">
+                                        <AiFillTwitterCircle size={40}/>
+                                    </a>
+                                </li>
+                                <li className="social-icons">
+                                    <a
+                                    href="https://www.instagram.com/basicallymanny"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="icon-colour  home-social-icons">
+                                        <AiFillInstagram size={40}/>
+                                    </a>
+                                </li>
+                            </ul>
                         </Col>
                     </Row>
                 </Container>
