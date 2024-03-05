@@ -1,5 +1,7 @@
 import {Row,Container} from "react-bootstrap";
 import TechStack from "./techStack"
+import ToolStack from "./ToolStack.jsx"
+import Github from "./Github.jsx"
 
 
 export default function SkillsCard(){
@@ -20,6 +22,11 @@ export default function SkillsCard(){
          <Container className="!relative !pt-7 pb-7">
             <TechStack></TechStack>
          </Container>
+         <h3><strong>My <span className="text-fuchsia-900">Toolset</span></strong></h3>
+         <Container className="!relative !pt-7 pb-7">
+            <ToolStack></ToolStack>
+         </Container>
+         <Github></Github>
       </Container>
     );
 }

@@ -1,6 +1,6 @@
 import {Row, Col} from "react-bootstrap";
 import {DiJavascript1,DiReact,DiNodejs,DiMongodb,DiPython,DiGit,DiJava,DiHtml5,DiCss3,DiDjango  } from "react-icons/di";
-import {SiPostgresql} from "react-icons/si";
+import {SiPostgresql,SiOpenai } from "react-icons/si";
 import './techStack.css';
 
 export default function TechStacl(){
@@ -13,10 +13,10 @@ export default function TechStacl(){
                    <DiCss3 />
                </Col>
                <Col xs={4} md={2} className="tech-icons">
-                  <DiJavascript1 />
+                  <DiJavascript1/>
                </Col>
                <Col xs={4} md={2} className="tech-icons">
-                  <DiNodejs />
+                  <DiNodejs/>
                </Col>
                <Col xs={4} md={2} className="tech-icons">
                   <DiReact />
@@ -38,6 +38,9 @@ export default function TechStacl(){
                </Col>
                <Col xs={4} md={2} className="tech-icons">
                    <DiDjango />
+               </Col>
+               <Col xs={4} md={2} className="tech-icons">
+                   <SiOpenai />
                </Col>
            </Row>
     );
