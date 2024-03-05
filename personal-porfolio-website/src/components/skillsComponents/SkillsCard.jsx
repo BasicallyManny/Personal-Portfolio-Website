@@ -1,47 +1,25 @@
-import {Row, Col,Container} from "react-bootstrap";
-import {DiJavascript1,DiReact,DiNodejs,DiMongodb,DiPython,DiGit,DiJava,DiHtml5,DiCss3,DiDjango  } from "react-icons/di";
-import {SiPostgresql} from "react-icons/si";
-import './techStack.css';
+import {Row,Container} from "react-bootstrap";
+import TechStack from "./techStack"
 
 
 export default function SkillsCard(){
     return(
-        <Container className="justify-center flex">
-            <Row className="justify-center flex mt-9 flex-wrap w-10/12">
-            <Col xs={4} md={2} className="tech-icons">
-                <DiHtml5 />
-            </Col>
-            <Col xs={4} md={2} className="tech-icons">
-                <DiCss3 />
-            </Col>
-            <Col xs={4} md={2} className="tech-icons">
-               <DiJavascript1 />
-            </Col>
-            <Col xs={4} md={2} className="tech-icons">
-               <DiNodejs />
-            </Col>
-            <Col xs={4} md={2} className="tech-icons">
-               <DiReact />
-            </Col>
-            <Col xs={4} md={2} className="tech-icons">
-               <DiMongodb />
-            </Col>
-            <Col xs={4} md={2} className="tech-icons">
-               <DiGit />
-            </Col>
-            <Col xs={4} md={2} className="tech-icons">
-               <SiPostgresql />
-            </Col>
-            <Col xs={4} md={2} className="tech-icons">
-               <DiPython />
-            </Col>
-            <Col xs={4} md={2} className="tech-icons">
-               <DiJava />
-            </Col>
-            <Col xs={4} md={2} className="tech-icons">
-                <DiDjango />
-            </Col>
-        </Row>
-        </Container>
+      <Container id="skillsContainer" className="justify-center flex flex-col">
+         <Row id="Skills Intro" className="!min-w-9/12 pl-15 !mt-15">
+            <blockquote className="mb-0">
+               <p style={{ textAlign: "justify" }} className=" italic subpixel-antialiased text-lg !z-10 pl-16 pr-16 !mt-5 !pb-14"> 
+                  Over the past four years, I have consciously cultivated my programming capabilities across several programming 
+                  languages and front-end web development technologies. I have amassed tangible experience constructing interactive web applications, 
+                  interfaces, and APIs. I strive to remain a flexible, adaptive programmer with a modern skillset. I look forward to learning new 
+                  frameworks and the best practices in software engineering. My field of Interest&apos;s are building new  Web Technologies and Products 
+                  and also in areas related to AI
+               </p>
+            </blockquote>
+         </Row>
+         <h3><strong>My <span className="text-fuchsia-900">Skillset</span></strong></h3>
+         <Container className="!relative !pt-7 pb-7">
+            <TechStack></TechStack>
+         </Container>
+      </Container>
     );
 }

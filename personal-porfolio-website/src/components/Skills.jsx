@@ -4,14 +4,14 @@ import {Container,Row} from 'react-bootstrap';
 export default function Skills(){
     return (
         <section id="techStack">
-             <Row id="aboutHeader" className="text-center mb-20 justify-center">
-                <Container fluid id="skillsContainer" className="relative">
-                    <Container>
-                        <h1 style={{ fontSize: "2.6em" }}>Skills<span className=""> &amp;</span> Technologies</h1>
-                        <SkillsCard></SkillsCard>
-                    </Container>
+            <Container fluid id="skills" className="relative !pb-6 !pt-8">
+                <Container>  
+                   <Row className="!pt-20 !pb-5 !mt-16 !text-center !justify-center !min-w-11/12">
+                      <h1 style={{ fontSize: "2.6em" }}><strong>Skills</strong><span className="pt-8 mt-8"> &amp;</span><strong> Technologies</strong></h1>
+                         <SkillsCard></SkillsCard>
+                   </Row>
                 </Container>
-             </Row>
+            </Container>
         </section>
     );
 }
