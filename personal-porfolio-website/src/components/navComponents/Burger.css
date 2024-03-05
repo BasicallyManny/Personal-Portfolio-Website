@@ -13,7 +13,7 @@
         margin: auto;
         background-color: white;
         position: relative;
-        transition: transform 0.3s;
+        transition: all 0.3s ease-out 0s;
     }
 
     &::after{
@@ -41,7 +41,7 @@
 
 .menu{
     height: 100vh;
-    width: min(80%, 450px);
+    width: min(50%, 350px);
     background-color: #444444;
     position: fixed;
     right: 0;
@@ -54,41 +54,44 @@
         padding: 75px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start;
         z-index: 50 !important;
+        font-weight: bold;
 
         .nav{
             display: flex;
             flex-direction: column;
             font-size: calc(25px + 0.390625vw);
             gap: 12px;
-            margin-top: 10%;
-            height:fit-content;
+            justify-content: center;
+            text-align: center;
 
             .header{
                 color: rgb(153, 153, 153);
                 border-bottom: 1px solid rgb(153, 153, 153);
                 text-transform: uppercase;
-                font-size: 11px;
+                font-size: 20px;
                 margin-bottom: 40px;
             }
 
-            a{
-                text-decoration: none;
-                color: white;
-                font-weight: 300;
-                margin:3%;
-                background: linear-gradient(currentColor, currentColor) bottom / 0 .1em no-repeat;
-                transition: 1s background-size;
-            }
-
-            a:hover {
-                background-size: 100% .1em;
-            }
-            
-            
         }
     }
+    a{
+        text-decoration: none;
+        color: white;
+        font-weight: 400;
+        margin:10%;
+        background: linear-gradient(#c95bf5, #c95bf5) bottom / 0 .1em no-repeat;
+        transition: 0.3s ease-in-out background-size;
+        width: fit-content;
+        display:flex
+    }
+}
+
+
+a:hover {
+    background-size: 100% .1em;
+    
 }
 
 .svgCurve{

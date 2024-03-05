@@ -1,32 +1,40 @@
 import { motion} from "framer-motion"
-// eslint-disable-next-line no-unused-vars
-import React from "react";
 import './Burger.css';
 import Curve from "./curve";
 import { menuSlide } from "../constants/anime"
+import {AiOutlineFundProjectionScreen,AiOutlinePhone,AiOutlineHome, AiOutlineDesktop } from "react-icons/ai";
+
+
 
 //Navigation Elements
 const navItems=[
     {
         title:"Home",
-        href:"/Home"
+        href:"/Home",
+        icon:<AiOutlineHome size={45}></AiOutlineHome>,
+   
     },
     {
       title:"Skills",
       href:"/Skills",
+      icon:<AiOutlineDesktop size={45}></AiOutlineDesktop>,
+      spaceBetween:"     ",
     },
     {
         title: "Projects",
         href: "/Projects",
+        icon:<AiOutlineFundProjectionScreen size={45}></AiOutlineFundProjectionScreen>,
+
     },
     {
       title:"Contact",
       href:"/Contact",
+      icon:<AiOutlinePhone size={45}></AiOutlinePhone>,
     }
   
   ];
   
-  const Nav = () => {
+  const Navitems = () => {
       return (
           <motion.div
           variants={menuSlide}
@@ -34,22 +42,25 @@ const navItems=[
           animate='enter'
           exit='exit'
           className="menu z-40"
-          >
+          > 
               <div className="body">
                   <div className="nav">
                       <div className="header">
                           <p>Navigation</p>
                       </div>
+                      <div id="navElements" className="flex flex-col items-center">
                       {
                           navItems.map((data, index) => (
-                              <a
-                                  key={index}
-                                  href={data.href}
-                              >
-                                  {data.title}
-                              </a>
+                            <a  className=""
+                                key={index}
+                                href={data.href}
+                            >
+                                {data.icon}{data.spaceBetween}{data.title}
+                            </a>
+
                           ))
                       }
+                      </div>
                   </div>
               </div>
               <Curve/>
@@ -57,4 +68,4 @@ const navItems=[
       )
   }
   
-  export default Nav
+  export default Navitems

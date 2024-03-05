@@ -130,3 +130,9 @@
 .icon-colour {
   color: #700c86 !important;
 }
+
+@media (max-width: 767px) {
+  .about-img {
+    padding-top: 0 !important;
+  }
+}
