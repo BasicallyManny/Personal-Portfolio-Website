@@ -4,7 +4,7 @@ import Particle from './constants/Particles';
 import Type from "./homeComponents/Type";
 import '../components/aboutComponents/about.css';
 import {AiFillGithub,AiFillInstagram,AiFillTwitterCircle  } from "react-icons/ai";
-
+import About from '../components/About'
 
 export default function Home(){
     return(
@@ -21,8 +21,12 @@ export default function Home(){
                             </div>
                         </Col>  
                     </Row>
+                    <Row>
+                        {/**ABOUT SECTION */}
+                        <About />
+                    </Row>
 
-                    <Row className="!justify-center !pt-7 !mt-12">
+                    <Row className="!justify-center">
                         <Col md={12} className=" home-about-social !justify-center text-center pt-7">
                             <h1>FIND ME ON</h1>
                             <p>Feel free to <span className="">connect </span>with me</p>

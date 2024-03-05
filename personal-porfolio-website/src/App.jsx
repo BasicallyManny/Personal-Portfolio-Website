@@ -7,7 +7,6 @@ import ScrollToTop from './components/constants/ScrollToTop.jsx';
 import PreLoader from './components/constants/Preloader.jsx';
 import Navbar from './components/Navbar.jsx'
 import Home from './components/Home.jsx'
-import About from './components/About.jsx'
 import Skills from './components/Skills.jsx'
 import Projects from './components/Projects'
 //import Contact from './components/Contact'
@@ -29,9 +28,8 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/project" element={<Projects />} />
-          <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Skills />} />
+          <Route path="/project" element={<Projects />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
       </div>

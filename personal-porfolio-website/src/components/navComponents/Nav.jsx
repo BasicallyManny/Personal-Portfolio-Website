@@ -12,10 +12,6 @@ const navItems=[
         href:"/Home"
     },
     {
-      title:"About",
-      href:"/About",
-    },
-    {
       title:"Skills",
       href:"/Skills",
     },
@@ -37,7 +33,7 @@ const navItems=[
           initial='initial'
           animate='enter'
           exit='exit'
-          className="menu"
+          className="menu z-40"
           >
               <div className="body">
                   <div className="nav">

@@ -59,6 +59,18 @@
   }
 
 /*
+*About Section Styles
+*/
+.about-activity {
+  list-style: none !important;
+  text-align: left !important;
+  padding-left: 10% !important;
+  display: flex !important;
+  font-size:large !important;
+  padding-bottom: 10%;
+}
+
+/*
 * Contact Styles
 */
 
