@@ -4,14 +4,13 @@ import { BsGithub } from "react-icons/bs";
 import './projectStyles.css';
 
 
-export default function ProjectCards(props) {
+export default function ProjectCard(props) {
   return (
-    <section id="ProjectCards">
-      <Card className="project-card-view">
-      <Card.Img variant="top" src={props.imgPath} alt="card-img" className="!object-fill !w-full" />
+    <Card className="project-card-view">
+      <Card.Img variant="top" src={props.imgPath} alt="card-img" />
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
-        <Card.Text className="text-justify">
+        <Card.Text style={{ textAlign: "justify" }}>
           {props.description}
         </Card.Text>
         <Button variant="primary" href={props.ghLink} target="_blank">
@@ -28,7 +27,7 @@ export default function ProjectCards(props) {
             variant="primary"
             href={props.demoLink}
             target="_blank"
-            className="ml-2.5"
+            style={{ marginLeft: "10px" }}
           >
             <CgWebsite /> &nbsp;
             {"Demo"}
@@ -36,6 +35,5 @@ export default function ProjectCards(props) {
         )}
       </Card.Body>
     </Card>
-    </section>
   );
 }
