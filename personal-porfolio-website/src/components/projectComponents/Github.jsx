@@ -5,7 +5,7 @@ export default function Github() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
       <h1 className="!text-5xl !font-medium !pt-2.5" style={{ paddingBottom: "20px" }}>
-        Days I <strong className="purple">Code</strong>
+        Days I <strong><span className="text-green-700">Code</span></strong>
       </h1>
       <GitHubCalendar
         username="BasicallyManny"

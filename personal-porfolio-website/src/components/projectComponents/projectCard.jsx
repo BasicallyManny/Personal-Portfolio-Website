@@ -13,9 +13,9 @@ export default function ProjectCard(props) {
         <Card.Text style={{ textAlign: "justify" }}>
           {props.description}
         </Card.Text>
-        <Button variant="primary" href={props.ghLink} target="_blank">
-          <BsGithub /> &nbsp;
-          {props.isBlog ? "Blog" : "GitHub"}
+        <Button className="flex-end bottom-0 mb-3" variant="primary" href={props.ghLink} target="_blank">
+          <BsGithub size={30} /> &nbsp;
+          {props.isBlog ? "Blog" : null}
         </Button>
         {"\n"}
         {"\n"}

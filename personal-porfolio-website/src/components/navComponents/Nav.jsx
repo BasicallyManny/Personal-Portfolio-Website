@@ -2,7 +2,7 @@ import { motion} from "framer-motion"
 import './Burger.css';
 import Curve from "./curve";
 import { menuSlide } from "../constants/anime"
-import {AiOutlineFundProjectionScreen,AiOutlinePhone,AiOutlineHome, AiOutlineDesktop } from "react-icons/ai";
+import {AiOutlineFundProjectionScreen,AiOutlinePhone,AiOutlineHome, AiOutlineDesktop, AiOutlineFileText  } from "react-icons/ai";
 
 
 
@@ -25,6 +25,11 @@ const navItems=[
         href: "/Projects",
         icon:<AiOutlineFundProjectionScreen size={45}></AiOutlineFundProjectionScreen>,
 
+    },
+    {
+        title:"Resume",
+        href:"/Contact",
+        icon:<AiOutlineFileText size={45}></AiOutlineFileText>,
     },
     {
       title:"Contact",

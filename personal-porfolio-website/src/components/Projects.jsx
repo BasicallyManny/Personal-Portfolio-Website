@@ -18,7 +18,7 @@ export default function Projects(){
           <Particles></Particles>
           <Container>
             <h1 className="project-heading">
-              My Recent <strong className="purple">Works </strong>
+              My Recent <strong><span className="text-fuchsia-900">Works</span></strong>
             </h1>
             <p style={{ color: "white" }}>
               Here are a few projects I&lsquo;ve worked on recently.
@@ -49,7 +49,7 @@ export default function Projects(){
                   imgPath={SpaceTime}
                   isBlog={false}
                   title="SpaceTime"
-                  description="A full-stack web-app that enables account holders to plan/organize social events."
+                  description="A full-stack web-app that enables account holders to plan/organize social events. This site was constructed over a period of eight weeks using the Agile Model to simulate industry practices"
                   ghLink="https://github.com/BasicallyManny/SpaceTime-Web-APP"              
                 />
               </Col>
