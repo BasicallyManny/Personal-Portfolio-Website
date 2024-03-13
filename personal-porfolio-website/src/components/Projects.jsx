@@ -14,7 +14,7 @@ import Github from "./projectComponents/Github";
 
 export default function Projects(){
     return (
-        <Container fluid className="project-section">
+        <Container fluid className="project-section tracking-tight">
           <Particles></Particles>
           <Container>
             <h1 className="project-heading">
@@ -24,12 +24,12 @@ export default function Projects(){
               Here are a few projects I&lsquo;ve worked on recently.
             </p>
             <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-              <Col className="project-card">
+              <Col className="project-card break-normal	">
                 <ProjectCard
                   imgPath={cpu}
                   isBlog={false}
                   title="CPU Assembler Program"
-                  description="A program that translate assembly code into machine code by useing short alphanumeric codes to represent processor instructions."
+                  description="A program that translate assembly code into machine code by using short alphanumeric codes to represent processor instructions."
                   ghLink="https://github.com/BasicallyManny/CPU-Assembler-Program"
                 />
               </Col>
