@@ -3,7 +3,7 @@ import {Container,Row} from 'react-bootstrap';
 
 export default function Skills(){
     return (
-        <section id="techStack">
+        <section id="techStack" className="bg-gray-950 text-white">
             <Container fluid id="skills" className="relative !pb-6 !pt-8">
                 <Container>  
                    <Row className="!pt-8 !pb-5 !mt-10 !text-center !justify-center !min-w-11/12">

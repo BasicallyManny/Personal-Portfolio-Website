@@ -14,13 +14,13 @@ import Github from "./projectComponents/Github";
 
 export default function Projects(){
     return (
-        <Container fluid className="project-section tracking-tight">
+        <Container fluid className="project-section tracking-tight bg-gray-950 text-white">
           <Particles></Particles>
           <Container>
             <h1 className="project-heading">
               My Recent <strong><span className="text-fuchsia-900">Works</span></strong>
             </h1>
-            <p style={{ color: "white" }}>
+            <p style={{ color: ""}}>
               Here are a few projects I&lsquo;ve worked on recently.
             </p>
             <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>

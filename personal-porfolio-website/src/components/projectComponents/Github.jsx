@@ -11,8 +11,8 @@ export default function Github() {
         username="BasicallyManny"
         blockSize={15}
         blockMargin={5}
-        color="#c084f5"
         fontSize={16}
+        colorTheme='dark'
       />
     </Row>
   );

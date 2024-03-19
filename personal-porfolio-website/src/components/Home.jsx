@@ -8,7 +8,7 @@ import About from '../components/About'
 
 export default function Home(){
     return(
-        <section id="home">
+        <section id="home" className="bg-gray-950">
              <Container fluid className="relative bg-top bg-no-repeat !pb-7 !pt-7 " id="home-section">
                 <Particle></Particle>
                 <Container id="home-content" className="text-left text-slate-400 !pt-36 !pr-0 !pb-8 z-0 ">

@@ -9,8 +9,8 @@ export default function ProjectCard(props) {
     <Card className="project-card-view">
       <Card.Img variant="top" src={props.imgPath} alt="card-img" />
       <Card.Body>
-        <Card.Title>{props.title}</Card.Title>
-        <Card.Text style={{ textAlign: "justify" }}>
+        <Card.Title className="!text-white ">{props.title}</Card.Title>
+        <Card.Text style={{ textAlign: "justify" }} className="!text-white">
           {props.description}
         </Card.Text>
         <Button className="flex-end bottom-0 mb-3" variant="primary" href={props.ghLink} target="_blank">

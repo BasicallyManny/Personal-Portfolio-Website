@@ -2,7 +2,7 @@ import {Container,Col,Row} from "react-bootstrap";
 import { IoGameController } from "react-icons/io5";
 import { FaBook } from "react-icons/fa";
 import { CgGym } from "react-icons/cg";
-import Beemo from "../../assets/Fun Images/Beemo.png";
+import gear from "../../assets/Fun Images/gear.gif";
 
 export default function AboutCard(){
     return(
@@ -28,18 +28,18 @@ export default function AboutCard(){
                             <Col md={7}>
                             <ul className="!pt-10">
                                 <li className="about-activity .icon-colour">
-                                    <a className="icon-colour  home-social-icons"><IoGameController size={30} /></a> Playing Video Games
+                                    <a className="icon-colour mr-4"><IoGameController size={30} /></a> Playing Video Games
                                 </li>
                                 <li className="about-activity .icon-colour">
-                                    <a className="icon-colour  home-social-icons"><FaBook size={30} /></a> Reading Philosophy
+                                    <a className="icon-colour mr-4"><FaBook size={30} /></a> Reading Philosophy
                                 </li>
                                 <li className="about-activity .icon-colour">
-                                    <a className="icon-colour  home-social-icons"><CgGym size={30} /></a> Going to the Gym
+                                    <a className="icon-colour mr-4"><CgGym size={30} /></a> Going to the Gym
                                 </li>
                             </ul>
                             </Col>
-                            <Col md={5} style={{ paddingTop: "35px" }}>
-                                <img src={Beemo} alt="about" className="img-fluid" />
+                            <Col md={5} style={{ paddingTop: "32px" }}>
+                                <img src={gear} alt="about" className="img-fluid !bg-transparent h-56" />
                             </Col>
                         </Row>
                     </Row>

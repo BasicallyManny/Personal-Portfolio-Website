@@ -9,7 +9,6 @@ import Navbar from './components/Navbar.jsx'
 import Home from './components/Home.jsx'
 import Skills from './components/Skills.jsx'
 import Projects from './components/Projects'
-//import Footer from './components/Footer.jsx'
 //import Contact from './components/Contact'
 
 function App() {
