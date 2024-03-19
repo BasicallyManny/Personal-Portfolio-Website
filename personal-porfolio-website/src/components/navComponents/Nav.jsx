@@ -28,7 +28,7 @@ const navItems=[
     },
     {
         title:"Resume",
-        href:"/Contact",
+        href:"/Resume",
         icon:<AiOutlineFileText size={45}></AiOutlineFileText>,
     },
     {
