@@ -11,7 +11,7 @@ export default function Home(){
         <section id="home" className="bg-gray-950">
              <Container fluid className="relative bg-top bg-no-repeat !pb-7 !pt-7 " id="home-section">
                 <Particle></Particle>
-                <Container id="home-content" className="text-left text-slate-400 !pt-36 !pr-0 !pb-8 z-0 ">
+                <Container id="home-content" className="text-left text-white !pt-36 !pr-0 !pb-8 z-0 ">
                     <Row>
                         <Col md={7} className="!pt-20 !pl-16">
                             <h1 style={{ paddingBottom: 15 }} id="heading" className="!text-2xl !pl-12 "> Hi There!{" "} <span className="wave" role="img" aria-labelledby="wave">👋🏻 </span> </h1>
