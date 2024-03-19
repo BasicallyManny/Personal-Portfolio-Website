@@ -2,7 +2,7 @@ import {Container,Col,Row} from "react-bootstrap";
 import { IoGameController } from "react-icons/io5";
 import { FaBook } from "react-icons/fa";
 import { CgGym } from "react-icons/cg";
-import gear from "../../assets/Fun Images/gear.gif";
+import gear from "../../assets/FunImages/gear.gif";
 
 export default function AboutCard(){
     return(
