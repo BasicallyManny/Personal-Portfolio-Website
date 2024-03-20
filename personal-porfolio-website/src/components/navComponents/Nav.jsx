@@ -4,10 +4,11 @@ import Curve from "./curve";
 import { menuSlide } from "../constants/anime";
 import {
   AiOutlineFundProjectionScreen,
-  AiOutlineMail ,
+  AiOutlineMail,
   AiOutlineHome,
   AiOutlineDesktop,
   AiOutlineFileText,
+  AiOutlineBranches,
 } from "react-icons/ai";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
@@ -57,7 +58,7 @@ const Navitems = () => {
           </div>
           <div
             id="navElements"
-            className="flex flex-col items-center min-h-fit"
+            className="flex flex-col items-center relative"
           >
             {navItems.map((data, index) => (
               <a className="" key={index} href={data.href}>
@@ -67,14 +68,23 @@ const Navitems = () => {
               </a>
             ))}
           </div>
-          <div className="flex justify-center w-full">
+          <div id="navButtons" className="flex align-middle w-full ml-3 items-baseline absolute bottom-0 xms:flex-col">
             <Button
-              className="text-white w-full bg-gradient-to-r from-purple-800 via-purple-900 to-purple-950 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 flex-end bottom-0 font-medium rounded-lg text-lg	 px-5 py-2.5 text-center me-2 mb-3"
+              className="text-white w-auto bg-gradient-to-r from-purple-800 via-purple-900 to-purple-950 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 flex-end bottom-0 font-medium rounded-lg text-lg	 px-5 py-2.5 text-center mb-3"
               variant="primary"
               onClick={() => setModalShow(true)}
             >
-              <AiOutlineMail  size={45} />
+              <AiOutlineMail size={30} />
             </Button>
+            <Button
+              className="text-white w-auto bg-gradient-to-r from-purple-800 via-purple-900 to-purple-950 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 flex-end bottom-0 font-medium rounded-lg text-lg	 px-5 py-2.5 text-center mb-3"
+              variant="primary"
+              href="https://github.com/BasicallyManny/Personal-Portfolio-Website"
+              target="_blank"
+            >
+              <AiOutlineBranches  size={30} />
+            </Button>
+
             <Contact show={modalShow} onHide={() => setModalShow(false)} />
           </div>
         </div>

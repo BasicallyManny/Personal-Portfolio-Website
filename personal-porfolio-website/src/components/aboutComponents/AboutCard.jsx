@@ -15,11 +15,11 @@ export default function AboutCard(){
                             <blockquote className="mb-0">
                                 <p style={{ textAlign: "justify" }} className=" italic subpixel-antialiased text-lg !z-10 pl-16 pr-16 !mt-5"> 
                                     I am a student currently attending the  <span className="text-fuchsia-900"><strong>University at Albany </strong></span> 
-                                    with a passion for everything technical and pursuing my dreams of becomeing an Software Engineer. Over the past four years, 
+                                    with a passion about everything technical and pursuing my dream of becoming a Software Engineer. Over the past four years, 
                                     I have consciously cultivated my programming capabilities across several programming languages and front-end web 
-                                    development technologies. My fields of interest are related to Web Development, Software Development, Artificial intelligence.
-                                    Recently, to improve my programming capabilities and to equimp myself with a more modern skillset
-                                    I have been implementing <strong>A.I</strong> in my programs.
+                                    development technologies. My fields of interest are related to Web Development, Software Development, and Artificial intelligence.
+                                    Recently, to improve my programming capabilities and to equip myself with a more modern skillset
+                                    I have been implementing <strong>A.I</strong> in my programs using the LangChain framework.
                                 </p>
                             </blockquote>
                         </>
