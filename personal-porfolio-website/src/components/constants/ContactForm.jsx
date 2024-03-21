@@ -4,20 +4,20 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { AiOutlineSend } from "react-icons/ai";
 
+
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [stateMessage, setStateMessage] = useState(null);
-
   const sendEmail = (e) => {
     e.persist();
     e.preventDefault();
     setIsSubmitting(true);
     emailjs
       .sendForm(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
         e.target,
-        process.env.REACT_APP_PUBLIC_KEY
+        import.meta.env.VITE_PUBLIC_KEY,
       )
       .then(
         (result) => {
