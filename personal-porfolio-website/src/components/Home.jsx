@@ -15,7 +15,7 @@ export default function Home(){
                     <Row>
                         <Col md={7} className="!pt-20 !pl-16">
                             <h1 style={{ paddingBottom: 15 }} id="heading" className="!text-2xl !pl-12 "> Hi There!{" "} <span className="wave" role="img" aria-labelledby="wave">👋🏻 </span> </h1>
-                            <h1 id="heading-name" className="!pl-12 !text-5xl"> I'M <strong className="main-name"> Manny Fong</strong></h1>
+                            <h1 id="heading-name" className="!pl-12 !text-5xl"> I'm <strong className="main-name"> Manny Fong</strong></h1>
                             <div style={{ padding: 48, textAlign: "left" }}>
                                 <Type></Type>
                             </div>
@@ -28,7 +28,7 @@ export default function Home(){
 
                     <Row className="!justify-center">
                         <Col md={12} className=" home-about-social !justify-center text-center pt-7">
-                            <h1>FIND ME ON</h1>
+                            <h1>FIND ME ON </h1>
                             <p>Feel free to <span className="">connect </span>with me</p>
                             <ul className="home-about-social-links">
                                 <li className="social-icons">

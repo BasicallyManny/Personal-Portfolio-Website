@@ -2,12 +2,11 @@ import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
-  const form = useRef();
+  const form = useRef(null);
   const [isLoading, setIsLoading] = useState(false);
 
   function sendEmail(e) {
     e.preventDefault();
-
     setIsLoading(true);
 
     emailjs
@@ -19,17 +18,16 @@ const ContactForm = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          console.log("Successfully send email. Result status is: "+result.text);
         },
         (error) => {
-          console.log(error.text);
+          console.log("Emailed failed to send"+error.text);
         }
       )
       .finally(() => {
         setIsLoading(false); // Reset loading state
       });
-
-    e.target.reset();
+      e.target.reset();
   }
   return (
     <section className="bg-slate-200 border border-black/10 m-[30px] px-[40px] pt-[40px] pb-[20px] rounded-3xl">
@@ -53,7 +51,7 @@ const ContactForm = () => {
                   required
                   type="text"
                   name="name"
-                  placeholder="enter your name"
+                  placeholder="Enter your name"
                   className="border border-black/10 block p-2 mt-3 text-[13px] w-full rounded-md"
                 />
               </label>
