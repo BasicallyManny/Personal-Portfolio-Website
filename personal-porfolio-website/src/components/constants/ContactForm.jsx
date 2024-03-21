@@ -1,69 +1,105 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import { AiOutlineSend } from "react-icons/ai";
-
 
 const ContactForm = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [stateMessage, setStateMessage] = useState(null);
-  const sendEmail = (e) => {
-    e.persist();
+  const form = useRef();
+  const [isLoading, setIsLoading] = useState(false);
+
+  function sendEmail(e) {
     e.preventDefault();
-    setIsSubmitting(true);
+
+    setIsLoading(true);
+
     emailjs
       .sendForm(
         import.meta.env.VITE_SERVICE_ID,
         import.meta.env.VITE_TEMPLATE_ID,
-        e.target,
-        import.meta.env.VITE_PUBLIC_KEY,
+        form.current,
+        import.meta.env.VITE_PUBLIC_KEY
       )
       .then(
         (result) => {
-          console.log(result);
-          setStateMessage("Message sent!");
-          setIsSubmitting(false);
-          setTimeout(() => {
-            setStateMessage(null);
-          }, 5000); // hide message after 5 seconds
+          console.log(result.text);
         },
         (error) => {
-          console.log(error);
-          setStateMessage("Something went wrong, please try again later");
-          setIsSubmitting(false);
-          setTimeout(() => {
-            setStateMessage(null);
-          }, 5000); // hide message after 5 seconds
+          console.log(error.text);
         }
-      );
+      )
+      .finally(() => {
+        setIsLoading(false); // Reset loading state
+      });
 
-    // Clears the form after sending the email
     e.target.reset();
-  };
+  }
   return (
-    <div onSubmit={sendEmail}>
-      <Form onSubmit={sendEmail}>
-        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="name@example.com" autoFocus required />
-          <Form.Control.Feedback type="invalid">
-              Please input a valid Email.
-            </Form.Control.Feedback>
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-          <Form.Label>Message</Form.Label>
-          <Form.Control as="textarea" required autoFocus rows={3} />
-          <Form.Control.Feedback type="invalid">
-              Please input a Message!
-          </Form.Control.Feedback>
-        </Form.Group>
-      </Form>
-      <Button type="submit" disabled={isSubmitting}>
-        <AiOutlineSend size={20} />
-        {stateMessage && <p>{stateMessage}</p>}
-      </Button>
-    </div>
+    <section className="border border-black/10 m-[30px] px-[40px] pt-[40px] pb-[20px] rounded-3xl">
+      <container className="m-auto max-w-[1200px]">
+        <h2 className="mb-[15px] font-light text-[22px] md:text-[28px]">
+          Get in touch
+        </h2>
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="mt-[30px]"
+          noValidate=""
+        >
+          <div className="grid grid-cols-2 gap-[16px]">
+            <div>
+              <label className="block">
+                <span className="mb-1 text-[13px] tracking-[6px] ml-1">
+                  NAME
+                </span>
+                <input
+                  required
+                  type="text"
+                  name="name"
+                  placeholder="enter your name"
+                  className="border border-black/10 block p-2 mt-3 text-[13px] w-full rounded-md"
+                />
+              </label>
+            </div>
+
+            <div>
+              <label className="block">
+                <span className="mb-1 text-[13px] tracking-[6px] ml-1">
+                  EMAIL
+                </span>
+                <input
+                  required
+                  type="email"
+                  name="email"
+                  placeholder="enter your name"
+                  className="border border-black/10 block p-2 mt-3 mb-3 text-[13px] w-full rounded-md"
+                />
+              </label>
+            </div>
+          </div>
+
+          <label className="block">
+            <span className="mb-[5px] text-[13px] tracking-[6px] ml-1">
+              MESSAGE
+            </span>
+            <textarea
+              required
+              name="message"
+              rows="3"
+              className="border border-black/10 w-full p-2 mt-3 rounded-md"
+            />
+          </label>
+
+          <button
+            type="submit"
+            disabled={isLoading}
+            className="w-full md:w-auto mt-3 px-4 py-3 text-sm md:text-[16px]
+          rounded-xl border border-transparent bg-black text-white 
+          hover:border hover:border-black hover:bg-white hover:text-black
+          flex ml-auto justify-center"
+          >
+            {isLoading ? "Loading..." : "Submit"}
+          </button>
+        </form>
+      </container>
+    </section>
   );
 };
 export default ContactForm;
