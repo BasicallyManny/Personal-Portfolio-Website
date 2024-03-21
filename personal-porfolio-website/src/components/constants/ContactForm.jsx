@@ -32,9 +32,9 @@ const ContactForm = () => {
     e.target.reset();
   }
   return (
-    <section className="border border-black/10 m-[30px] px-[40px] pt-[40px] pb-[20px] rounded-3xl">
+    <section className="bg-slate-200 border border-black/10 m-[30px] px-[40px] pt-[40px] pb-[20px] rounded-3xl">
       <container className="m-auto max-w-[1200px]">
-        <h2 className="mb-[15px] font-light text-[22px] md:text-[28px]">
+        <h2 className="mb-[15px] font-bold text-[30px] md:text-[38px]">
           Get in touch
         </h2>
         <form
@@ -46,7 +46,7 @@ const ContactForm = () => {
           <div className="grid grid-cols-2 gap-[16px]">
             <div>
               <label className="block">
-                <span className="mb-1 text-[13px] tracking-[6px] ml-1">
+                <span className="mb-1 font-bold text-[13px] tracking-[6px] ml-1">
                   NAME
                 </span>
                 <input
@@ -61,7 +61,7 @@ const ContactForm = () => {
 
             <div>
               <label className="block">
-                <span className="mb-1 text-[13px] tracking-[6px] ml-1">
+                <span className="mb-1 font-bold text-[13px] tracking-[6px] ml-1">
                   EMAIL
                 </span>
                 <input
@@ -76,7 +76,7 @@ const ContactForm = () => {
           </div>
 
           <label className="block">
-            <span className="mb-[5px] text-[13px] tracking-[6px] ml-1">
+            <span className="font-bold mb-[5px] text-[13px] tracking-[6px] ml-1">
               MESSAGE
             </span>
             <textarea
