@@ -5,8 +5,8 @@ import Col from 'react-bootstrap/Col';
 import  "../components/projectComponents/projectStyles.css";
 /*** Import images from Assets folder*/
 import cpu from "../../src/assets/ProjectImages/cpu.png"
-import Kami from "../../src/assets/ProjectImages/Kami.png"
-import SpaceTime from "../../src/assets/ProjectImages/SpaceTime.png"
+import kami from "../../src/assets/ProjectImages/kami.png"
+import spaceTime from "../../src/assets/ProjectImages/spaceTime.png"
 
 import Particles from "../components/constants/Particles"
 import Github from "./projectComponents/Github";
@@ -36,7 +36,7 @@ export default function Projects(){
     
               <Col className="project-card">
                 <ProjectCard
-                  imgPath={Kami}
+                  imgPath={kami}
                   isBlog={false}
                   title="Kami"
                   description="Coordinate bot for Minecraft(really any game that uses coordinates, but was made with Minecraft in mind) - based off the dictionary data structure built into Python. "
@@ -46,7 +46,7 @@ export default function Projects(){
     
               <Col className="project-card">
                 <ProjectCard
-                  imgPath={SpaceTime}
+                  imgPath={spaceTime}
                   isBlog={false}
                   title="SpaceTime"
                   description="A full-stack web-app that enables account holders to plan/organize social events. This site was constructed over a period of eight weeks using the Agile Model to simulate industry practices"
