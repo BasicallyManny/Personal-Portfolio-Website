@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Navitems from "./navComponents/Nav"
+import Navitems from "./navComponents/Nav.jsx"
 import { AnimatePresence } from "framer-motion"
 
 const Navbar = () => {

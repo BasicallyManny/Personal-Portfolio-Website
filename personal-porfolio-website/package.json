@@ -1,20 +1,20 @@
 {
+  "homepage": "http://BasicallyManny.github.io/personal-porfolio-website",
   "name": "personal-porfolio-website",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
+  "scripts": {  
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
-    "@headlessui/react": "^1.7.18",
-    "@heroicons/react": "^2.1.1",
     "bootstrap": "^5.3.3",
-    "dotenv": "^16.4.5",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^11.0.3",
     "react": "^18.2.0",
@@ -23,11 +23,9 @@
     "react-dom": "^18.2.0",
     "react-github-calendar": "^4.1.2",
     "react-icons": "^5.0.1",
-    "react-parallax": "^3.5.1",
     "react-particles": "^2.12.2",
     "react-pdf": "^7.7.1",
     "react-router-dom": "^6.22.2",
-    "react-tsparticles": "^2.12.2",
     "tsparticles": "^3.2.1",
     "typewriter-effect": "^2.21.0"
   },
@@ -40,6 +38,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "gh-pages": "^6.1.1",
     "postcss": "^8.4.33",
     "postcss-nesting": "^12.0.2",
     "tailwindcss": "^3.4.1",

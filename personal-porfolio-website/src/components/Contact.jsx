@@ -1,8 +1,5 @@
 import Modal from "react-bootstrap/Modal";
-//import Form from "react-bootstrap/Form";
-//import Button from "react-bootstrap/Button";
-//import { AiOutlineSend } from "react-icons/ai";
-import ContactForm from "./constants/ContactForm";
+import ContactForm from "./constants/ContactForm.jsx";
 
 export default function Contact(props) {
   return (

@@ -1,5 +1,5 @@
 import {Row,Container} from "react-bootstrap";
-import TechStack from "./techStack"
+import TechStack from "./TechStack.jsx"
 import ToolStack from "./ToolStack.jsx"
 
 export default function SkillsCard(){

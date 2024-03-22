@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import "./Burger.css";
-import Curve from "./curve";
-import { menuSlide } from "../constants/anime";
+import Curve from "./Curve.jsx";
+import { menuSlide } from "../constants/anime.js";
 import {
   AiOutlineFundProjectionScreen,
   AiOutlineMail,
@@ -12,7 +12,7 @@ import {
 } from "react-icons/ai";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
-import Contact from "../Contact";
+import Contact from "../Contact.jsx";
 //Navigation Elements
 const navItems = [
   {
