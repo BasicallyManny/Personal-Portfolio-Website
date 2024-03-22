@@ -4,9 +4,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import  "../components/projectComponents/projectStyles.css";
 /*** Import images from Assets folder*/
-import cpu from "../../src/assets/Project Images/cpu.png"
-import Kami from "../../src/assets/Project Images/Kami.png"
-import SpaceTime from "../../src/assets/Project Images/SpaceTime.png"
+import cpu from "../../src/assets/ProjectImages/cpu.png"
+import Kami from "../../src/assets/ProjectImages/Kami.png"
+import SpaceTime from "../../src/assets/ProjectImages/SpaceTime.png"
 
 import Particles from "../components/constants/Particles"
 import Github from "./projectComponents/Github";
