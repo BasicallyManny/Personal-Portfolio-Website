@@ -4,6 +4,7 @@ export default function Particle() {
   return (
     <Particles
       id="tsparticles"
+      style={{ position: "absolute"}}
       params={{
         particles: {
           number: {

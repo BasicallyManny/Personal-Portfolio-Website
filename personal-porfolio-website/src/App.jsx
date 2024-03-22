@@ -29,7 +29,7 @@ function App() {
   return (
     <Router>
       <PreLoader load={load} />
-      <div className="App" id={load ? "no-scroll" : "scroll"}>
+      <div className="App " id={load ? "no-scroll" : "scroll"}>
         <Navbar />
         <ScrollToTop />
         <Routes>
