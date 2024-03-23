@@ -6,6 +6,7 @@ export default function Type() {
       options={{
         strings: [
           "Web Developer",
+          "MERN Stack Developer",
           "Student",
           "Open Source Contributor",
           "A.I Application Developer",

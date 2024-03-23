@@ -27,7 +27,7 @@ export default function Home() {
           className="text-left text-white !pt-36 !pr-0 !pb-8 z-0 "
         >
           <Row>
-            <Col md={7} className="!pt-20 !pl-16">
+            <Col md={7} className="!pt-20">
               <h1
                 style={{ paddingBottom: 15 }}
                 id="heading"
@@ -66,7 +66,7 @@ export default function Home() {
           <Row className="!justify-center">
             <Col
               md={12}
-              className=" home-about-social !justify-center text-center pt-7"
+              className=" !justify-center text-center pt-7"
             >
               <h1>FIND ME ON </h1>
               <p>

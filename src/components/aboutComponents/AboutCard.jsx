@@ -8,12 +8,12 @@ export default function AboutCard(){
     return(
         <>
         <section id="AboutCard" className="">
-            <Container id="AboutContainer" className="!min-w-10/12">
+            <Container id="AboutContainer" className="">
                 <Container fluid id="AboutContent" className="pl-15 mt-15">
                     <Row id="AboutInfo">
                         <>
                             <blockquote className="mb-0">
-                                <p style={{ textAlign: "justify" }} className=" italic subpixel-antialiased text-lg !z-10 pl-16 pr-16 !mt-5"> 
+                                <p style={{ textAlign: "center" }} className=" italic subpixel-antialiased text-lg !z-10 !mt-5"> 
                                     I am a student currently attending the  <span className="text-fuchsia-900"><strong>University at Albany </strong></span> 
                                     with a passion about everything technical and pursuing my dream of becoming a Software Engineer. Over the past four years, 
                                     I have consciously cultivated my programming capabilities across several programming languages and front-end web 
