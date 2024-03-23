@@ -50,6 +50,7 @@ button:focus {
   background-repeat: no-repeat;
   background-position: center;
 }
+
 #preloader-none {
   opacity: 0;
 }
