@@ -46,7 +46,7 @@ button:focus {
   height: 100%;
   z-index: 999999;
   background-color: #0c0513;
-  background-image: url(./assets/FunImages/Eclipse.gif);
+  background-image: url(./assets/FunImages/eclipse.gif);
   background-repeat: no-repeat;
   background-position: center;
 }
