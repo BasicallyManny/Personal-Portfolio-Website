@@ -1,5 +1,5 @@
 import {Row, Col} from "react-bootstrap";
-import {DiJavascript1,DiReact,DiNodejs,DiMongodb,DiPython,DiGit,DiJava,DiHtml5,DiCss3,DiDjango  } from "react-icons/di";
+import {DiJavascript1,DiReact,DiNodejs,DiMongodb,DiPython,DiGit,DiJava,DiHtml5,DiCss3,DiDjango,  } from "react-icons/di";
 import {SiPostgresql,SiOpenai } from "react-icons/si";
 import './techStack.css';
 

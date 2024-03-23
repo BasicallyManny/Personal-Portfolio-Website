@@ -10,6 +10,7 @@ import {
   AiFillGithub,
   AiFillInstagram,
   AiFillTwitterCircle,
+  AiFillLinkedin,
 } from "react-icons/ai";
 import About from "../components/About";
 
@@ -101,6 +102,16 @@ export default function Home() {
                     className="icon-colour  home-social-icons"
                   >
                     <AiFillInstagram size={40} />
+                  </a>
+                </li>
+                <li className="social-icons">
+                  <a
+                    href="https://www.linkedin.com/in/manfred-fong-532548300/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="icon-colour  home-social-icons"
+                  >
+                    <AiFillLinkedin  size={40} />
                   </a>
                 </li>
               </ul>
