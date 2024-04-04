@@ -8,7 +8,8 @@ body {
   font-family: "Raleway", serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to left, rgb(14, 4, 33), rgb(14 4 33));
+  background-color: rgb(2, 6, 23);
+  background-image: linear-gradient(to left, rgb(2, 6, 23), rgb(2, 6, 23));
 }
 
 
