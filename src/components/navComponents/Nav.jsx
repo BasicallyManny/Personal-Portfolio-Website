@@ -56,10 +56,7 @@ const Navitems = () => {
           <div className="header">
             <p>Navigation</p>
           </div>
-          <div
-            id="navElements"
-            className="flex flex-col items-center relative"
-          >
+          <div id="navElements" className="flex flex-col items-center relative">
             {navItems.map((data, index) => (
               <a className="" key={index} href={data.href}>
                 {data.icon}
@@ -68,21 +65,24 @@ const Navitems = () => {
               </a>
             ))}
           </div>
-          <div id="navButtons" className="flex align-middle w-full ml-3 items-baseline absolute bottom-0 xms:flex-col">
+          <div
+            id="navButtons"
+            className="flex flex-col sm:flex-row w-full ml-3 items-baseline absolute bottom-0"
+          >
             <Button
-              className="text-white w-auto bg-gradient-to-r from-purple-800 via-purple-900 to-purple-950 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 flex-end bottom-0 font-medium rounded-lg text-lg	 px-5 py-2.5 text-center mb-3"
+              className="text-white w-full sm:w-auto bg-gradient-to-r from-purple-800 via-purple-900 to-purple-950 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mb-3 sm:mb-0 sm:mr-3"
               variant="primary"
               onClick={() => setModalShow(true)}
             >
               <AiOutlineMail size={30} />
             </Button>
             <Button
-              className="text-white w-auto bg-gradient-to-r from-purple-800 via-purple-900 to-purple-950 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 flex-end bottom-0 font-medium rounded-lg text-lg	 px-5 py-2.5 text-center mb-3"
+              className="text-white w-full sm:w-auto bg-gradient-to-r from-purple-800 via-purple-900 to-purple-950 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mb-3"
               variant="primary"
               href="https://github.com/BasicallyManny/Personal-Portfolio-Website"
               target="_blank"
             >
-              <AiOutlineBranches  size={30} />
+              <AiOutlineBranches size={30} />
             </Button>
 
             <Contact show={modalShow} onHide={() => setModalShow(false)} />
