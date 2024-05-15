@@ -13,6 +13,7 @@ import {
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
 import Contact from "../Contact.jsx";
+
 //Navigation Elements
 const navItems = [
   {
@@ -67,17 +68,18 @@ const Navitems = () => {
           </div>
           <div
             id="navButtons"
-            className="flex flex-col sm:flex-row w-full ml-3 items-baseline absolute bottom-0"
+            className="flex items-center flex-col sm:flex-row w-full ml-3 absolute bottom-0"
           >
             <Button
-              className="text-white w-full sm:w-auto bg-gradient-to-r from-purple-800 via-purple-900 to-purple-950 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mb-3 sm:mb-0 sm:mr-3"
+              className="nav-button mb-2 sm:mb-0 !mr-0 !ml-0 sm:mr-3 !w-10/12"
               variant="primary"
               onClick={() => setModalShow(true)}
             >
               <AiOutlineMail size={30} />
             </Button>
+            
             <Button
-              className="text-white w-full sm:w-auto bg-gradient-to-r from-purple-800 via-purple-900 to-purple-950 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mb-3"
+              className="nav-buttonmb-2 sm:mb-0 !mr-0 sm:mr-3 !w-10/12 !ml-0"
               variant="primary"
               href="https://github.com/BasicallyManny/Personal-Portfolio-Website"
               target="_blank"

@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { Container } from "react-bootstrap";
 
 const ContactForm = () => {
   const form = useRef(null);
@@ -31,7 +32,7 @@ const ContactForm = () => {
   }
   return (
     <section className="bg-slate-200 border border-black/10 m-[30px] px-[40px] pt-[40px] pb-[20px] rounded-3xl">
-      <container className="m-auto max-w-[1200px]">
+      <Container className="m-auto max-w-[1200px]">
         <h2 className="mb-[15px] font-bold text-[30px] md:text-[38px]">
           Get in touch
         </h2>
@@ -96,7 +97,7 @@ const ContactForm = () => {
             {isLoading ? "Loading..." : "Submit"}
           </button>
         </form>
-      </container>
+      </Container>
     </section>
   );
 };
