@@ -13,7 +13,7 @@ export default function ProjectCard(props) {
         <Card.Text style={{ textAlign: "center" }} className="!text-white">
           {props.description}
         </Card.Text>
-        <Button className="flex-end bottom-0 mb-3" variant="primary" href={props.ghLink} target="_blank">
+        <Button className="flex-end bottom-0 mt-4" variant="primary" href={props.ghLink} target="_blank">
           <BsGithub size={30} /> &nbsp;
           {props.isBlog ? "Blog" : null}
         </Button>

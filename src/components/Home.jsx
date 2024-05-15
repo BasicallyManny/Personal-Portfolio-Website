@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Container, Row, Col } from "react-bootstrap";
-import Particle from "./constants/Particles";
 import Type from "./homeComponents/Type";
 import "../components/aboutComponents/about.css";
 //import profileImage from "../assets/FunImages/profile_image.png";
@@ -23,7 +22,6 @@ export default function Home() {
         className="relative bg-top bg-no-repeat !pb-7 !pt-7 "
         id="home-section"
       >
-        <Particle></Particle>
         <Container
           id="home-content"
           className="text-left text-white !pt-36 !pr-0 !pb-8 z-0 "
