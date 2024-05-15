@@ -4,7 +4,8 @@ import Particle from "./constants/Particles";
 import Type from "./homeComponents/Type";
 import "../components/aboutComponents/about.css";
 //import profileImage from "../assets/FunImages/profile_image.png";
-import profileImage from "../../src/assets/FunImages/profile_img.png"
+import coding from "../assets/FunImages/coding.gif";
+
 
 import {
   AiFillGithub,
@@ -50,7 +51,7 @@ export default function Home() {
             </Col>
             <Col md={5} style={{ paddingBottom: 20 }}>
               <img
-                src={profileImage}
+                src={coding}
                 alt="home pic"
                 className="img-fluid"
                 width="640"

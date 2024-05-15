@@ -24,7 +24,7 @@ export default function AboutCard(){
                             </blockquote>
                         </>
                         <Row>
-                            <h5 className="!pt-5">Apart from coding, some other activities that I enjoy!</h5>
+                            <h5 className="!pt-10">Apart from coding, some other activities that I enjoy!</h5>
                             <Col md={7}>
                             <ul className="!pt-10">
                                 <li className="about-activity .icon-colour">
