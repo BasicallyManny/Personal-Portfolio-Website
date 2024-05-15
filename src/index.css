@@ -8,8 +8,7 @@ body {
   font-family: "Raleway", serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(2, 6, 23);
-  background-image: linear-gradient(to left, rgb(2, 6, 23), rgb(2, 6, 23));
+  background-image: linear-gradient(to left, rgb(3, 7, 18), rgb(3, 7, 18));
 }
 
 
@@ -73,7 +72,7 @@ button:focus {
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
