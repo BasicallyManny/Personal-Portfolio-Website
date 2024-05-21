@@ -8,8 +8,6 @@ import coding from "../assets/FunImages/coding.gif";
 
 import {
   AiFillGithub,
-  AiFillInstagram,
-  AiFillTwitterCircle,
   AiFillLinkedin,
 } from "react-icons/ai";
 import About from "../components/About";
@@ -81,26 +79,6 @@ export default function Home() {
                     className="icon-colour  home-social-icons"
                   >
                     <AiFillGithub size={40} />
-                  </a>
-                </li>
-                <li className="social-icons">
-                  <a
-                    href="https://twitter.com/WackBasically"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="icon-colour  home-social-icons"
-                  >
-                    <AiFillTwitterCircle size={40} />
-                  </a>
-                </li>
-                <li className="social-icons">
-                  <a
-                    href="https://www.instagram.com/basicallymanny"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="icon-colour  home-social-icons"
-                  >
-                    <AiFillInstagram size={40} />
                   </a>
                 </li>
                 <li className="social-icons">
