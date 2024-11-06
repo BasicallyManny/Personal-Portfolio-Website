@@ -14,29 +14,31 @@ export default function ProjectCard(props) {
         <Card.Text style={{ textAlign: "center" }} className="!text-white">
           {props.description}
         </Card.Text>
-        <Button
-          className="flex-end bottom-0 mt-4"
-          variant="primary"
-          href={props.ghLink}
-          target="_blank"
-        >
-          <BsGithub size={30} /> &nbsp;
-          {props.isBlog ? "Blog" : null}
-        </Button>
-        {"\n"}
-        {"\n"}
 
-        {!props.isBlog && props.demoLink && (
+        {/* Button Container */}
+        <div className={`button-container ${!props.isBlog ? "no-blog" : ""}`}>
+          {/* GitHub Button */}
           <Button
+            className="project-card-btn github"
             variant="primary"
-            href={props.demoLink}
+            href={props.ghLink}
             target="_blank"
-            style={{ marginLeft: "10px" }}
           >
-            <CgWebsite /> &nbsp;
-            {"Demo"}
+            <BsGithub size={30} /> &nbsp;
           </Button>
-        )}
+
+          {/* If it is a blog, show a button to navigate to the blog */}
+          {props.isBlog && (
+            <Button
+              className="project-card-btn blog"
+              variant="secondary"
+              href={props.blogLink} // Provide the blog link as a prop
+              target="_blank"
+            >
+              <CgWebsite size={30} /> &nbsp;
+            </Button>
+          )}
+        </div>
       </Card.Body>
     </Card>
   );

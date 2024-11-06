@@ -59,7 +59,7 @@ const Navitems = () => {
           </div>
           <div id="navElements" className="flex flex-col items-center relative">
             {navItems.map((data, index) => (
-              <a className="" key={index} href={data.href}>
+              <a className="anchor-buttons" key={index} href={data.href}>
                 {data.icon}
                 {data.spaceBetween}
                 {data.title}
@@ -79,7 +79,7 @@ const Navitems = () => {
             </Button>
             
             <Button
-              className="nav-buttonmb-2 sm:mb-0 !mr-0 sm:mr-3 !w-10/12 !ml-0"
+              className="nav-button mb-2 sm:mb-0 !mr-0 sm:mr-3 !w-10/12 !ml-0"
               variant="primary"
               href="https://github.com/BasicallyManny/Personal-Portfolio-Website"
               target="_blank"

@@ -20,76 +20,90 @@
   color: white !important;
   background-color: transparent !important;
   opacity: 0.9 !important;
-  transition: all 0.5s ease 0s !important;
-  height: 100% !important;
+  transition: all 0.5s ease !important;
+  height: 95% !important;
 }
+
 .project-card-view:hover {
   transform: scale(1.02) !important;
-  overflow: hidden !important;
   box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
 }
 
-.blog-card {
-  padding-top: 50px !important;
-  padding-bottom: 50px !important;
-  padding-left: 25px !important;
-  padding-right: 25px !important;
-  height: auto !important;
-}
-
-.blog-card-view {
-  background-color: transparent !important;
-  box-shadow: 0 3px 3px 2px rgba(145, 77, 161, 0.459) !important;
-  transition: all 0.5s ease 0s !important;
-  height: 100% !important;
-}
-
-.blog-link {
-  text-decoration: none !important;
-}
-
-.blog-link:hover {
-  cursor: pointer !important;
-}
-
-.blog-card-view:hover {
-  transform: scale(1.02) !important;
-  overflow: hidden !important;
-  box-shadow: 0 3px 3px 5px rgba(155, 88, 173, 0.65) !important;
-}
-
+/* Card Image Styling */
 .card-img-top {
   padding: 20px !important;
   opacity: 0.8 !important;
   border-radius: 10px !important;
 }
 
-.blog-img {
-  padding: 0px !important;
-  opacity: 0.8 !important;
-  border-radius: 0px !important;
+/* Button Container for Layout */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Space between buttons */
+  margin-top: 20px;
 }
 
-.btn-primary {
-  display: flex !important;
-  align-content: center;
+/* When no blog is available, center the button */
+.button-container.no-blog {
   justify-content: center;
-  color: #fff !important;
-  background-color: #623686 !important;
-  border-color: #623686 !important;
+  width: 100%;
 }
 
-.btn-primary:hover {
-  color: #fff !important;
-  background-color: #6d20c5d7 !important;
-  border-color: #6d20c5d7 !important;
+/* Button Styling */
+.project-card-btn {
+  width: 48%; /* Default: Buttons will occupy equal space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-align: center;
 }
+
+/* Button Hover Effect */
+.project-card-btn:hover {
+  transform: scale(1.05);
+}
+
+/* GitHub Button Styling */
+.project-card-btn.github {
+  background-color: #623686;
+  border-color: #623686;
+}
+
+.project-card-btn.github:hover {
+  background-color: #6d20c5;
+  border-color: #6d20c5;
+}
+
+/* Blog Button Styling */
+.project-card-btn.blog {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.project-card-btn.blog:hover {
+  background-color: #5a6268;
+  border-color: #5a6268;
+}
+
+/* Demo Button Styling */
+.project-card-btn.demo {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.project-card-btn.demo:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Remove focus outline */
 .btn:focus {
   outline: none !important;
   box-shadow: none !important;
-}
-.project-heading {
-  font-size: 2.3em !important;
-  font-weight: 500 !important;
-  padding-top: 10px !important;
 }
