@@ -23,34 +23,7 @@ export default function Projects() {
           Here are a few projects I&lsquo;ve worked on recently.
         </p>
         <Row className="justify-center gap-4">
-          <Col xs={12} md={6} lg={4} xl={3} className="project-card">
-            <ProjectCard
-              imgPath={cpu}
-              isBlog={false}
-              title="CPU Assembler Program"
-              description="A program that translate assembly code into machine code by using short alphanumeric codes to represent processor instructions."
-              ghLink="https://github.com/BasicallyManny/CPU-Assembler-Program"
-            />
-          </Col>
-          <Col xs={12} md={6} lg={4} xl={3} className="project-card">
-            <ProjectCard
-              imgPath={kami}
-              isBlog={false}
-              title="Kami"
-              description="Coordinate bot for Minecraft(really any game that uses coordinates, but was made with Minecraft in mind) - based off the dictionary data structure built into Python. "
-              ghLink="https://github.com/BasicallyManny/Coordinate-Bot-for-Discord"
-            />
-          </Col>
-          <Col xs={12} md={6} lg={4} xl={3} className="project-card">
-            <ProjectCard
-              imgPath={spaceTime}
-              isBlog={false}
-              title="SpaceTime"
-              description="A full-stack web-app that enables account holders to plan/organize social events. This site was constructed over a period of eight weeks using the Agile Model to simulate industry practices"
-              ghLink="https://github.com/BasicallyManny/SpaceTime-Web-APP"
-            />
-          </Col>
-          <Col xs={12} md={6} lg={4} xl={3} className="project-card">
+                    <Col xs={12} md={6} lg={4} xl={3} className="project-card">
             <ProjectCard
               imgPath={bema}
               isBlog={false}
@@ -70,7 +43,34 @@ export default function Projects() {
               ghLink="https://github.com/BasicallyManny/Algorithm-Visualizer"
               blogLink="https://algorithmsvisualizer.vercel.app/"
             />
-          </Col>                                    
+          </Col>
+          <Col xs={12} md={6} lg={4} xl={3} className="project-card">
+            <ProjectCard
+              imgPath={spaceTime}
+              isBlog={false}
+              title="SpaceTime"
+              description="A full-stack web-app that enables account holders to plan/organize social events. This site was constructed over a period of eight weeks using the Agile Model to simulate industry practices"
+              ghLink="https://github.com/BasicallyManny/SpaceTime-Web-APP"
+            />
+          </Col>              
+          <Col xs={12} md={6} lg={4} xl={3} className="project-card">
+            <ProjectCard
+              imgPath={cpu}
+              isBlog={false}
+              title="CPU Assembler Program"
+              description="A program that translate assembly code into machine code by using short alphanumeric codes to represent processor instructions."
+              ghLink="https://github.com/BasicallyManny/CPU-Assembler-Program"
+            />
+          </Col>
+          <Col xs={12} md={6} lg={4} xl={3} className="project-card">
+            <ProjectCard
+              imgPath={kami}
+              isBlog={false}
+              title="Kami"
+              description="Coordinate bot for Minecraft(really any game that uses coordinates, but was made with Minecraft in mind) - based off the dictionary data structure built into Python. "
+              ghLink="https://github.com/BasicallyManny/Coordinate-Bot-for-Discord"
+            />
+          </Col>                      
         </Row>
       </Container>
       <Github />
