@@ -45,10 +45,11 @@ export default function Resume() {
             variant="primary"
             href={pdf}
             target="_blank"
-            style={{ maxWidth: "250px" }}
+            style={{ maxWidth: "250px", backgroundColor: "#6a0dad", borderColor: "#6a0dad",display: "flex", justifyContent: "center", alignItems: "center" }} // Custom purple color
           >
-            <AiOutlineDownload size={25}/>
-            &nbsp;Download PDF
+            <AiOutlineDownload size={35} style={{ marginRight: "8px" }} />
+            <p>Download Resume</p>
+
           </Button>
         </Row>
       </Container>
