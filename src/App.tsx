@@ -1,12 +1,42 @@
 import './App.css'
+import { RouterProvider } from 'react-router-dom'
+import router from './routes'
+
+// Load Particles
+import Particles from "react-tsparticles";
+import type { Container, Engine } from "tsparticles-engine";
+import { loadSlim } from "tsparticles-slim";
+import { useCallback } from 'react';
+
+// Import your particles options
+import stars from './components/particles/stars';
 
 function App() {
+  const particlesInit = useCallback(async (engine: Engine) => {
+    await loadSlim(engine);
+  }, []);
+
+  const particlesLoaded = useCallback(async (container: Container | undefined) => {
+    console.log(container);
+  }, []);
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline text-red-600">Hello World </h1>
+      {/* Full-screen particle background */}
+      <Particles
+        className="absolute-background"
+        id="tsparticles"
+        init={particlesInit}
+        loaded={particlesLoaded}
+        options={stars}
+      />
+
+      {/* Your actual app content */}
+      <div className="relative z-10">
+        <RouterProvider router={router} />
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
