@@ -13,10 +13,10 @@ import stars from './components/particles/stars';
 
 function App() {
   const particlesInit = useCallback(async (engine: Engine) => {
-    await loadSlim(engine);
+    await loadSlim(engine); // Loads slim version of tsparticles
   }, []);
 
-  const particlesLoaded = useCallback(async (container: Container | undefined) => {
+  const particlesLoaded = useCallback(async (container?: Container) => {
     console.log(container);
   }, []);
 
@@ -31,7 +31,7 @@ function App() {
         options={stars}
       />
 
-      {/* Your actual app content */}
+      {/* Actual app content */}
       <div className="relative z-10">
         <RouterProvider router={router} />
       </div>
