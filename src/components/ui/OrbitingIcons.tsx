@@ -2,95 +2,100 @@ import { motion } from 'framer-motion';
 import { IconType } from 'react-icons';
 
 interface OrbitingIconProps {
-  icons: {
-    Icon: IconType;
-    color?: string;
-    size?: number;
-    initialRotation?: number;
-    duration?: number;
-  }[];
-  profileSrc: string;
-  profileAlt?: string;
-  className?: string;
+    profileSrc: string;
+    profileAlt?: string;
+    className?: string;
+    icons: {
+        Icon: IconType;
+        color?: string;
+    }[];
 }
 
 const OrbitingIcon: React.FC<OrbitingIconProps> = ({
-  icons,
-  profileSrc,
-  profileAlt = "Profile",
-  className = "",
+    profileSrc,
+    profileAlt = "Profile",
+    className = "",
+    icons,
 }) => {
-  return (
-    <div className={`relative inline-flex items-center justify-center ${className}`}>
-      {/* Profile Image */}
-      <img
-        className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full border-4 shadow-lg"
-        src={profileSrc}
-        alt={profileAlt}
-      />
-      
-      {/* Orbiting Icons */}
-      {icons.map((iconData, index) => {
-        const {
-          Icon,
-          color = "currentColor",
-          size = 24,
-          initialRotation = (index * 360) / icons.length,
-          duration = 10 + index * 2,
-        } = iconData;
-        
-        // Calculate responsive size
-        const responsiveSize = {
-          base: size,
-          sm: Math.floor(size * 1.25),
-          md: Math.floor(size * 1.5),
+    if (icons.length !== 8) {
+        console.warn("You need exactly 8 icons: 4 for the inner ring, 4 for the outer ring.");
+    }
+
+    const innerIcons = icons.slice(0, 4);
+    // 4 icons spaced evenly around the ring (North, East, South, West)
+    const angles = [0, 90, 180, 270];
+
+    // Control the radius — outer ring is larger to avoid collision
+    const radii = {
+        inner: 100, // Distance from center to icon center (inner ring)
+        outer: 160, // Distance from center to icon center (outer ring)
+    };
+
+    // Icon size — ensure icons are small enough to never touch each other
+    const iconSize = 42;
+
+    const getPosition = (radius: number, angle: number) => {
+        const radians = (angle * Math.PI) / 180;
+        return {
+            x: radius * Math.cos(radians),
+            y: radius * Math.sin(radians),
         };
-        
-        // Calculate orbit radius based on image size
-        const orbitRadius = {
-          base: 90,
-          sm: 110, 
-          md: 130,
-        };
-        
+    };
+
+    const renderOrbitingIcon = (
+        { Icon }: { Icon: IconType; color?: string },
+        angle: number,
+        radius: number,
+        duration: number,
+        index: number
+    ) => {
+        const { x, y } = getPosition(radius, angle);
+
         return (
-          <motion.div
-            key={index}
-            className="absolute"
-            initial={{ rotate: initialRotation }}
-            animate={{ rotate: initialRotation + 360 }}
-            transition={{
-              duration,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-            style={{
-              width: '1px',
-              height: '1px',
-              transformOrigin: 'center center',
-            }}
-          >
-            <motion.div 
-              className="absolute"
-              style={{
-                width: `${responsiveSize.base}px`,
-                height: `${responsiveSize.base}px`,
-                x: orbitRadius.base,
-                y: -responsiveSize.base / 2,
-                color,
-              }}
-              className="sm:w-8 sm:h-8 md:w-10 md:h-10 bg-white rounded-full shadow-md flex items-center justify-center"
+            <motion.div
+                key={index}
+                className="absolute"
+                initial={{ rotate: angle }}
+                animate={{ rotate: angle + 360 }}
+                transition={{
+                    duration,
+                    repeat: Infinity,
+                    ease: "linear",
+                }}
+                style={{
+                    transformOrigin: "center center",
+                }}
             >
-              <Icon 
-                size={responsiveSize.base} 
-                className={`text-${color} sm:text-[${responsiveSize.sm}px] md:text-[${responsiveSize.md}px]`}
-              />
+                <motion.div
+                    className="absolute flex items-center justify-center rounded-full shadow-lg overflow-hidden"
+                    style={{
+                        x,
+                        y,
+                        width: `${iconSize}px`,
+                        height: `${iconSize}px`,
+                    }}
+                >
+                    <Icon className="w-6 h-6" />
+                </motion.div>
             </motion.div>
-          </motion.div>
         );
-      })}
-    </div>
-  );
+    };
+
+    return (
+        <div className={`relative inline-flex items-center justify-center ${className}`}>
+            {/* Profile Image */}
+            <img
+                className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full border-4 shadow-lg"
+                src={profileSrc}
+                alt={profileAlt}
+            />
+
+            {/* Inner Ring */}
+            {innerIcons.map((icon, index) =>
+                renderOrbitingIcon(icon, angles[index], radii.inner * 1.3 , 20, `inner-${index}`)
+            )}
+        </div>
+    );
 };
 
 export default OrbitingIcon;

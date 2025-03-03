@@ -2,7 +2,7 @@ import { Typewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
 import OrbitingIcon from '../ui/orbitingIcons';
 // Updated icons array with a third outer ring
-import { FaReact, FaNodeJs, FaJs, FaGithub, FaCode } from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaGithub, FaPython } from 'react-icons/fa';
 
 
 export const Hero = () => {
@@ -44,16 +44,16 @@ export const Hero = () => {
                 <div className="relative flex justify-center items-center w-64 h-64 mx-auto z-10">
                     {/* Profile Image */}
                     <OrbitingIcon
-                        profileSrc="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                        profileSrc="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
                         profileAlt="Profile"
                         icons={[
-                            { Icon: FaReact, color: "#61DAFB", initialRotation: 0, duration: 15 },
-                            { Icon: FaNodeJs, color: "#339933", initialRotation: 72, duration: 17 },
-                            { Icon: FaJs, color: "#F7DF1E", initialRotation: 144, duration: 20 },
-                            { Icon: FaGithub, color: "#181717", initialRotation: 216, duration: 18 },
-                            { Icon: FaCode, color: "#E34F26", initialRotation: 288, duration: 16 }
+                            { Icon: FaReact },
+                            { Icon: FaNodeJs},
+                            { Icon: FaGithub},
+                            { Icon: FaPython },
                         ]}
                     />
+
 
                     {/* Orbiting Icons */}
                 </div>
