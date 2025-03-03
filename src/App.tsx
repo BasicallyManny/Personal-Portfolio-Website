@@ -9,7 +9,7 @@ import { loadSlim } from "tsparticles-slim";
 import { useCallback } from 'react';
 
 // Import your particles options
-import stars from './components/particles/stars';
+import stars from './components/ui/stars';
 
 function App() {
   const particlesInit = useCallback(async (engine: Engine) => {

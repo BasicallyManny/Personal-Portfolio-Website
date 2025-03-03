@@ -51,7 +51,7 @@ export const Navbar = () => {
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.5 }}
-            className="fixed top-0 w-full bg-transparent text-white z-50"
+            className="fixed top-0 w-full bg-black text-white z-50"
         >
             <div className="flex justify-between items-center h-full mx-auto max-w-7xl p-4 w-full">
                 {/* Logo */}
@@ -111,7 +111,7 @@ export const Navbar = () => {
                     closed: { opacity: 0, height: 0, y: -20 },
                 }}
                 transition={{ duration: 0.4, ease: 'easeInOut' }}
-                className="md:hidden overflow-hidden bg-black/80 w-full absolute left-0 top-full"
+                className="md:hidden overflow-hidden bg-black w-full absolute left-0 top-full"
             >
                 <ul className="flex flex-col space-y-4 p-4">
                     {navElements.map((element, index) => (
