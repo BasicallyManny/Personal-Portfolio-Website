@@ -22,6 +22,8 @@ const OrbitingIcon: React.FC<OrbitingIconProps> = ({
     }
 
     const innerIcons = icons.slice(0, 4);
+    const outerIcons = icons.slice(4, 8);
+
     // 4 icons spaced evenly around the ring (North, East, South, West)
     const angles = [0, 90, 180, 270];
 
@@ -84,15 +86,22 @@ const OrbitingIcon: React.FC<OrbitingIconProps> = ({
     return (
         <div className={`relative inline-flex items-center justify-center ${className}`}>
             {/* Profile Image */}
-            <img
-                className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full border-4 shadow-lg"
-                src={profileSrc}
-                alt={profileAlt}
-            />
+            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full border-4 border-white shadow-lg overflow-hidden">
+                <img
+                    className="w-full h-full object-cover object-center"
+                    src={profileSrc}
+                    alt={profileAlt}
+                />
+            </div>
 
             {/* Inner Ring */}
             {innerIcons.map((icon, index) =>
-                renderOrbitingIcon(icon, angles[index], radii.inner * 1.3 , 20, `inner-${index}`)
+                renderOrbitingIcon(icon, angles[index], radii.inner * 1.3, 20, `inner-${index}`)
+            )}
+
+            {/* Outer Ring */}
+            {outerIcons.map((icon, index) =>
+                renderOrbitingIcon(icon, angles[index] + 45, radii.outer * 1.3, 30, `outer-${index}`)
             )}
         </div>
     );
