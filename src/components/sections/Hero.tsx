@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import OrbitingIcon from '../ui/orbitingIcons';
+import OrbitingIcon from '../ui/OrbitingIcons';
 // Updated icons array with a third outer ring
 import { FaReact, FaPython } from 'react-icons/fa';
 import { SiFastapi, SiTypescript, SiMongodb, SiTailwindcss, SiMysql, SiLangchain } from "react-icons/si";

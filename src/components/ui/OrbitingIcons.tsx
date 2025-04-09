@@ -55,10 +55,10 @@ const OrbitingIcon: React.FC<OrbitingIconProps> = ({
 
         return (
             <motion.div
-                key={index}
+                key={`orbiting-${angle}-${index}`} // Unique key for each icon
                 className="absolute"
                 initial={{ rotate: angle }}
-                animate={{ rotate: angle + 360 }}
+                animate={{ rotate: [angle, angle + 360] }} // Smooth animation
                 transition={{
                     duration,
                     repeat: Infinity,
@@ -96,12 +96,12 @@ const OrbitingIcon: React.FC<OrbitingIconProps> = ({
 
             {/* Inner Ring */}
             {innerIcons.map((icon, index) =>
-                renderOrbitingIcon(icon, angles[index], radii.inner * 1.3, 20, `inner-${index}`)
+                renderOrbitingIcon(icon, angles[index], radii.inner * 1.3, 20, index)
             )}
 
             {/* Outer Ring */}
             {outerIcons.map((icon, index) =>
-                renderOrbitingIcon(icon, angles[index] + 45, radii.outer * 1.3, 30, `outer-${index}`)
+                renderOrbitingIcon(icon, angles[index] + 45, radii.outer * 1.3, 30, index)
             )}
         </div>
     );

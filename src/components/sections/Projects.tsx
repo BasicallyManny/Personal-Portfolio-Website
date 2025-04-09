@@ -1,11 +1,10 @@
-import React from 'react';
-// Assuming you'll need these icons or similar ones
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
 
 const Projects = () => {
     // You'll need to replace this with your actual project data
     const projects = [
         {
+            id: 1,
             title: "Kami",
             description: "Kami is a powerful discord bot designed to enhance your Minecraft experience. Kami combines robust database management and intelligent responses.",
             tags: ["Python", "Discord.py", "FastAPI", "MongoDB"],
@@ -15,6 +14,7 @@ const Projects = () => {
             image: '../../../assets/KamiSite.webp'
         },
         {
+            id: 2,
             title: "Algorithm Visualizer",
             description: "An interactive sorting algorithm visualizer built with React, TypeScript, and Framer Motion, featuring smooth animations and real-time visual feedback to help users explore and understand different sorting algorithms.",
             tags: ["React", "TypeScript", "Framer Motion", "Tailwind CSS"],
