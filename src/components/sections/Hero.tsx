@@ -4,6 +4,8 @@ import OrbitingIcon from '../ui/OrbitingIcons';
 import { FaReact, FaPython } from 'react-icons/fa';
 import { SiFastapi, SiTypescript, SiMongodb, SiTailwindcss, SiMysql, SiLangchain } from "react-icons/si";
 
+import profileIMG from '../../../assets/me.webp';
+
 export const Hero = () => {
     // Text animation variants
     const titleVariants = {
@@ -146,7 +148,7 @@ export const Hero = () => {
                         transition={{ delay: 0.6, duration: 0.8 }}
                     >
                         <OrbitingIcon
-                            profileSrc="../../../assets/me.webp"
+                            profileSrc={profileIMG}
                             profileAlt="Profile"
                             icons={[
                                 { Icon: FaReact },

@@ -10,6 +10,8 @@ import { useCallback, useState, useEffect, useRef } from 'react';
 
 // Import your particles options
 import stars from './components/ui/stars';
+//import images
+import susImage from '../assets/sus.png';
 
 function App() {
   const [mousePosition, setMousePosition] = useState({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
@@ -104,7 +106,7 @@ function App() {
         }}
       >
         <img
-          src="../assets/sus.png"
+          src={susImage}
           alt="Cursor follower"
           width="60"
           height="60"

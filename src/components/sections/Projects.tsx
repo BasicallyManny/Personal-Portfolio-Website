@@ -2,6 +2,11 @@ import { FiGithub, FiExternalLink } from 'react-icons/fi';
 import { FaTools } from "react-icons/fa";
 import { motion } from 'framer-motion';
 
+import GideonImg from '../../../assets/gideon.webp';
+import KamiImg from '../../../assets/KamiSite.webp';   
+import AlgorithmVisualizerImg from '../../../assets/algovisualizer.webp';
+
+
 const Projects = () => {
     const projects = [
         {
@@ -12,7 +17,7 @@ const Projects = () => {
             notes: ["Secure authentication using JWT", "Spreadsheet-style interface for tracking job applications", "Insightful analytics to understand your job search patterns", "Integrated calendar to keep track of important events"],
             githubLink: "https://github.com/BasicallyManny/Gideon/",
             liveLink: "https://gideon-nine.vercel.app/",
-            image: '../../../assets/gideon.webp',
+            image: GideonImg,
             wip: true
         },
         {
@@ -23,7 +28,7 @@ const Projects = () => {
             notes: ["Integrated LangChain and OpenAI, providing AI-generated Minecraft insights", "Stores and retrieves Minecraft Coordinates within MongoDB to help you navigate the world", "Interactive and user-friendly Discord commands for a seamless Minecraft experience."],
             githubLink: "https://github.com/BasicallyManny/Kami-2.0",
             liveLink: "https://kami-site-one.vercel.app/",
-            image: '../../../assets/KamiSite.webp',
+            image: KamiImg,
             wip: false
         },
         {
@@ -34,7 +39,7 @@ const Projects = () => {
             notes: ["Users can choose from Quicksort, Merge Sort, and Insertion Sort, adjust array sizes, and control the speed of the visualization.", "Each algorithm comes with a clear explanation and code examples in multiple programming languages.", "Color-coded, real-time animations highlight the sorting process step by step for better understanding."],
             githubLink: "https://github.com/BasicallyManny/Algorithm-Visualizer",
             liveLink: "https://algorithmsvisualizer.vercel.app/",
-            image: '../../../assets/algovisualizer.webp',
+            image: AlgorithmVisualizerImg,
             wip: false
         },
     ];
