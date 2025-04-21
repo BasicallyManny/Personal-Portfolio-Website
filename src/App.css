@@ -1,40 +1,22 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0rem;
-  text-align: center;
-}
+@import "tailwindcss";
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-p {
-  margin: 0em !important;
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.absolute-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* behind everything */
   }
-  to {
-    transform: rotate(360deg);
+
+
+  @keyframes spin {
+    0% { rotate: 0deg; }
+    100% { rotate: 360deg; }
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  
+  @keyframes pulse {
+    0%, 100% { scale: 1; opacity: 0.8; }
+    50% { scale: 1.1; opacity: 1; }
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+  
