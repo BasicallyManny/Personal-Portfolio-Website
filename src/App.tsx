@@ -108,8 +108,8 @@ function App() {
         <img
           src={susImage}
           alt="Cursor follower"
-          width="60"
-          height="60"
+          width="70"
+          height="70"
           style={{
             animation: 'spin 8s linear infinite, pulse 2s ease-in-out infinite',
             transform: 'translate(-50%, -50%)',
