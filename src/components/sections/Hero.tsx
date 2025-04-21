@@ -7,7 +7,7 @@ import { SiFastapi, SiTypescript, SiMongodb, SiTailwindcss, SiMysql, SiLangchain
 export const Hero = () => {
     // Text animation variants
     const titleVariants = {
-        hidden: { opacity: 0, y: -50 },
+        hidden: { opacity: 0, y: 100 },
         visible: { 
             opacity: 1, 
             y: 0,
@@ -102,9 +102,9 @@ export const Hero = () => {
                         className="text-5xl font-bold mb-4 md:justify-center sm:text-6xl"
                         variants={titleVariants}
                     >
-                        Hello, I'm Manny Fong{' '}
+                        <h1 className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Hello, I'm Manny Fong</h1>{' '}
                         <motion.span
-                            className="inline-block"
+                            className="inline-block mt-7"
                             animate={{
                                 rotate: [0, 10, 0, -10, 0],
                             }}

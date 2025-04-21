@@ -8,18 +8,18 @@ const Projects = () => {
             id: 1,
             title: "Gideon",
             description: "Full-stack job application tracker to manage and monitor applications with ease. Includes analytics for insights into preferences and success rates, helping you stay organized and boost job search efficiency.",
-            tags: ["React", "TypeScript", "Tailwind CSS", "Vite", "Node.js", "FastAPI", "MongoDB"],
+            tags: ["React", "TypeScript", "Python", "Tailwind CSS", "Vite", "Node.js", "FastAPI", "MongoDB", "Vercel", "Google Cloud"],
             notes: ["Secure authentication using JWT", "Spreadsheet-style interface for tracking job applications", "Insightful analytics to understand your job search patterns", "Integrated calendar to keep track of important events"],
             githubLink: "https://github.com/BasicallyManny/Gideon/",
             liveLink: "https://gideon-nine.vercel.app/",
             image: '../../../assets/gideon.webp',
-            wip: true 
+            wip: true
         },
         {
             id: 2,
             title: "Kami",
             description: "Kami is a powerful discord bot designed to enhance your Minecraft experience. Kami combines robust database management and intelligent responses.",
-            tags: ["Python", "Discord.py", "FastAPI", "MongoDB"],
+            tags: ["Python", "Discord.py", "FastAPI", "MongoDB", "LangChain", "Railway"],
             notes: ["Integrated LangChain and OpenAI, providing AI-generated Minecraft insights", "Stores and retrieves Minecraft Coordinates within MongoDB to help you navigate the world", "Interactive and user-friendly Discord commands for a seamless Minecraft experience."],
             githubLink: "https://github.com/BasicallyManny/Kami-2.0",
             liveLink: "https://kami-site-one.vercel.app/",
@@ -30,7 +30,7 @@ const Projects = () => {
             id: 3,
             title: "Algorithm Visualizer",
             description: "An interactive sorting algorithm visualizer built with React, TypeScript, and Framer Motion, featuring smooth animations and real-time visual feedback to help users explore and understand different sorting algorithms.",
-            tags: ["React", "TypeScript", "Framer Motion", "Tailwind CSS"],
+            tags: ["React", "TypeScript", "Framer Motion", "Tailwind CSS", "Vite", "Node.js", "Vercel"],
             notes: ["Users can choose from Quicksort, Merge Sort, and Insertion Sort, adjust array sizes, and control the speed of the visualization.", "Each algorithm comes with a clear explanation and code examples in multiple programming languages.", "Color-coded, real-time animations highlight the sorting process step by step for better understanding."],
             githubLink: "https://github.com/BasicallyManny/Algorithm-Visualizer",
             liveLink: "https://algorithmsvisualizer.vercel.app/",
@@ -41,20 +41,25 @@ const Projects = () => {
 
     return (
         <section id="projects" className="py-20 bg-transparent min-h-screen">
-            <motion.div 
+            <motion.div
                 className="container border mx-auto px-4 sm:px-8"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
             >
-                <motion.h1 
-                    className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-16 tracking-tight"
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    My Projects
-                </motion.h1>
+                <div className="max-w-6xl mx-auto">
+                    <div className="mb-16 text-center">
+                        <motion.h1
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
+                        >
+                            My Projects
+                        </motion.h1>
+                        <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto"></div>
+                    </div>
+                </div>
 
                 <div className="space-y-32">
                     {projects.map((project, index) => (
@@ -76,10 +81,10 @@ const Projects = () => {
                                     whileHover={{ scale: 1.03 }}
                                     transition={{ duration: 0.4 }}
                                 />
-                                
+
                                 {/* WIP Banner - show only if project.wip is true */}
                                 {project.wip && (
-                                    <motion.div 
+                                    <motion.div
                                         className="flex items-center gap-2 absolute top-10 right-7 bg-amber-600 text-white px-4 py-1.5 text-sm font-medium rounded-md shadow-lg transform rotate-2"
                                         initial={{ x: 20, opacity: 0 }}
                                         animate={{ x: 0, opacity: 1 }}
@@ -96,7 +101,7 @@ const Projects = () => {
                                 <div className="flex items-center">
                                     <h3 className="text-4xl font-bold text-white">{project.title}</h3>
                                     {project.wip && (
-                                        <motion.span 
+                                        <motion.span
                                             className="ml-4 bg-amber-600 text-white text-sm px-2 py-1 rounded-full"
                                             initial={{ scale: 0.8, opacity: 0 }}
                                             animate={{ scale: 1, opacity: 1 }}
@@ -158,7 +163,7 @@ const Projects = () => {
                                         whileHover={{ scale: 1.1 }}
                                         transition={{ duration: 0.2 }}
                                     >
-                                        <FiExternalLink size={22} color='white'/>
+                                        <FiExternalLink size={22} color='white' />
                                     </motion.a>
                                 </div>
                             </div>

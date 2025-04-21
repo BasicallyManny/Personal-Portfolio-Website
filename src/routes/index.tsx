@@ -3,6 +3,7 @@ import {Layout} from "../components/layout/Layout";
 
 import {Home} from '../pages/Home'
 import Projects from "../components/sections/Projects";
+import Resume from "../pages/Resume";
 
 const router  = createBrowserRouter([
     {
@@ -15,7 +16,15 @@ const router  = createBrowserRouter([
             {
                 path: "/projects",
                 element: <Projects />,
-            }
+            },
+            {
+                path: "/about",
+                element: <Home />,
+            },
+            {
+                path: "/resume",
+                element: <Resume />,
+            },
         ],
     },
 ]);
