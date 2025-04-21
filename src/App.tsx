@@ -18,7 +18,8 @@ function App() {
   const animationFrameId = useRef<number | null>(null);
   const prevMousePosition = useRef({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
   const isMoving = useRef(false);
-  const movementTimer = useRef<NodeJS.Timeout | null>(null);
+  const movementTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
 
   const handleMouseMove = useCallback((event: MouseEvent) => {
     setMousePosition({ x: event.clientX, y: event.clientY });
