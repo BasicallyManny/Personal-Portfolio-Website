@@ -1,25 +1,19 @@
 import { motion } from 'framer-motion'
 import { FiMenu, FiX } from 'react-icons/fi';
-
 import { LuGithub, LuLinkedin, } from "react-icons/lu";
 import { AiOutlineFileText } from "react-icons/ai";
-
-
-
 import { useState, useEffect } from 'react'
-
-
 
 interface IconElement {
     icon?: React.ReactNode
     to?: string
+    isExternal?: boolean
 }
 
-
 const iconElements: IconElement[] = [
-    { icon: <LuGithub size={25} color='violet' />, to: 'https://github.com/BasicallyManny' },
-    { icon: <LuLinkedin size={25} color='white'/>, to: 'https://www.linkedin.com/in/manfred-fong-532548300/' },
-    { icon: <AiOutlineFileText size={25} color='green' />, to: "resume" }
+    { icon: <LuGithub size={25} color='violet' />, to: 'https://github.com/BasicallyManny', isExternal: true },
+    { icon: <LuLinkedin size={25} color='white'/>, to: 'https://www.linkedin.com/in/manfred-fong-532548300/', isExternal: true },
+    { icon: <AiOutlineFileText size={25} color='green' />, to: "/SWEResume.pdf", isExternal: true }
 ]
 
 export const Navbar = () => {
@@ -34,6 +28,16 @@ export const Navbar = () => {
         window.addEventListener('resize', handleResize)
         return () => window.removeEventListener('resize', handleResize)
     }, [])
+
+    const handleIconClick = (to: string | undefined, isExternal: boolean | undefined) => {
+        if (!to) return;
+        
+        if (isExternal) {
+            window.open(to, '_blank');
+        } else {
+            window.location.href = to;
+        }
+    }
 
     return (
         <motion.nav
@@ -62,7 +66,7 @@ export const Navbar = () => {
                             key={index}
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
-                            onClick={() => window.open(element.to, '_blank')}
+                            onClick={() => handleIconClick(element.to, element.isExternal)}
                             className="cursor-pointer"
                             style={{ cursor: 'pointer' }}
                         >
