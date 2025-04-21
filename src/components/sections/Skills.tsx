@@ -43,7 +43,7 @@ const Skills = () => {
     ];
 
     // Custom skill icon component with enhanced hover tooltip
-    const SkillIcon = ({ tech, theme }: { tech: { name: string; icon: JSX.Element; color: string; bgColor?: string }, theme: 'blue' | 'purple' | 'cyan' }) => {
+    const SkillIcon = ({ tech, theme }: { tech: { name: string; icon: React.ReactNode; color: string; bgColor?: string }, theme: 'blue' | 'purple' | 'cyan' }) => {
         // Theme colors for different categories
         const themeColors = {
             blue: {
