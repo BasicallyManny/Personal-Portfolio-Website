@@ -1,6 +1,14 @@
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
 import { FaTools } from "react-icons/fa";
+import { VscDebugDisconnect } from "react-icons/vsc";
+
 import { motion } from 'framer-motion';
+
+import GideonImg from '../../../assets/gideon.webp';
+import KamiImg from '../../../assets/KamiSite.webp';   
+import AlgorithmVisualizerImg from '../../../assets/algovisualizer.webp';
+import BEMAImg from '../../../assets/BEMA.webp';
+
 
 const Projects = () => {
     const projects = [
@@ -12,8 +20,9 @@ const Projects = () => {
             notes: ["Secure authentication using JWT", "Spreadsheet-style interface for tracking job applications", "Insightful analytics to understand your job search patterns", "Integrated calendar to keep track of important events"],
             githubLink: "https://github.com/BasicallyManny/Gideon/",
             liveLink: "https://gideon-nine.vercel.app/",
-            image: '../../../assets/gideon.webp',
-            wip: true
+            image: GideonImg,
+            wip: true,
+            retired: false,
         },
         {
             id: 2,
@@ -23,19 +32,33 @@ const Projects = () => {
             notes: ["Integrated LangChain and OpenAI, providing AI-generated Minecraft insights", "Stores and retrieves Minecraft Coordinates within MongoDB to help you navigate the world", "Interactive and user-friendly Discord commands for a seamless Minecraft experience."],
             githubLink: "https://github.com/BasicallyManny/Kami-2.0",
             liveLink: "https://kami-site-one.vercel.app/",
-            image: '../../../assets/KamiSite.webp',
-            wip: false
+            image: KamiImg,
+            wip: false,
+            retired: true,
         },
         {
             id: 3,
+            title: "BEMA",
+            description: "BEMA is a chatbot that can converse with a person and help with various tasks similar to chatGPT. However, BEMA offers a unique feature tailored to job seekers: it can create individualized resumes based on the job listings furnished by the user.",
+            tags: ["Python", "LangChain", "Streamlit", "MongoDB", "OpenAI", "TavilyAI"],
+            notes: ["Interactive Chatbot for Personalized Resume Writing", "Web Scraping for Job and LinkedIn Data", "Integrated Web Search for Data Enrichment"],
+            githubLink: "https://github.com/Teccon1998/GenAIAssistant",
+            liveLink: "https://github.com/Teccon1998/GenAIAssistant",
+            image: BEMAImg,
+            wip: false,
+            retired: true,
+        },
+        {
+            id: 4,
             title: "Algorithm Visualizer",
             description: "An interactive sorting algorithm visualizer built with React, TypeScript, and Framer Motion, featuring smooth animations and real-time visual feedback to help users explore and understand different sorting algorithms.",
             tags: ["React", "TypeScript", "Framer Motion", "Tailwind CSS", "Vite", "Node.js", "Vercel"],
             notes: ["Users can choose from Quicksort, Merge Sort, and Insertion Sort, adjust array sizes, and control the speed of the visualization.", "Each algorithm comes with a clear explanation and code examples in multiple programming languages.", "Color-coded, real-time animations highlight the sorting process step by step for better understanding."],
             githubLink: "https://github.com/BasicallyManny/Algorithm-Visualizer",
             liveLink: "https://algorithmsvisualizer.vercel.app/",
-            image: '../../../assets/algovisualizer.webp',
-            wip: false
+            image: AlgorithmVisualizerImg,
+            wip: false,
+            retired: false,
         },
     ];
 
@@ -94,12 +117,25 @@ const Projects = () => {
                                         <span>In Active Development</span>
                                     </motion.div>
                                 )}
+                                {/* RETIRED BANNER */}
+                                {project.retired && (
+                                    <motion.div
+                                        className="flex items-center gap-2 absolute top-10 right-7 bg-red-600 text-white px-4 py-1.5 text-sm font-medium rounded-md shadow-lg transform rotate-2"
+                                        initial={{ x: 20, opacity: 0 }}
+                                        animate={{ x: 0, opacity: 1 }}
+                                        transition={{ delay: 0.3, duration: 0.4 }}
+                                    >
+                                        <VscDebugDisconnect size={20} className="text-white" />
+                                        <span>Retired</span>
+                                    </motion.div>
+                                )}
                             </div>
 
                             {/* Project Info */}
                             <div className="w-full md:w-2/5 space-y-4">
                                 <div className="flex items-center">
                                     <h3 className="text-4xl font-bold text-white">{project.title}</h3>
+                                    {/* Work in progress Tag */}
                                     {project.wip && (
                                         <motion.span
                                             className="ml-4 bg-amber-600 text-white text-sm px-2 py-1 rounded-full"
@@ -110,6 +146,18 @@ const Projects = () => {
                                             WIP
                                         </motion.span>
                                     )}
+                                    {/* Retired Tag */}
+                                    {project.retired && (
+                                        <motion.span
+                                            className="ml-4 bg-red-600 text-white text-sm px-2 py-1 rounded-full"
+                                            initial={{ scale: 0.8, opacity: 0 }}
+                                            animate={{ scale: 1, opacity: 1 }}
+                                            transition={{ delay: 0.4, duration: 0.3 }}
+                                        >
+                                            retired
+                                        </motion.span>
+                                    )}
+
                                 </div>
 
                                 <div className="bg-gray-900 p-6 rounded-lg shadow-lg">

@@ -1,5 +1,5 @@
 import {
-    SiTypescript, SiNodedotjs, SiPostgresql, SiMongodb,SiGithub,
+    SiTypescript, SiNodedotjs, SiPostgresql, SiMongodb, SiGithub,
     SiReact, SiTailwindcss, SiFigma, SiFramer,
     SiPhp, SiBootstrap,
     SiDocker, SiVercel, SiGooglecloud, SiFastapi,
@@ -7,6 +7,7 @@ import {
 } from 'react-icons/si';
 
 import { motion } from 'framer-motion';
+import GitHubCalendar from 'react-github-calendar';
 
 
 const Skills = () => {
@@ -97,8 +98,20 @@ const Skills = () => {
         );
     };
 
+    // Custom theme for GitHub calendar that follows the requirement of exactly 5 colors
+    const githubTheme = {
+        dark: [
+            '#262626',          // No contributions - zinc-800
+            '#6366f180',        // Level 1 - purple with transparency 
+            '#8b5cf680',        // Level 2 - purple with more opacity
+            '#a855f780',        // Level 3 - even more vibrant purple
+            '#d946ef80'         // Level 4 - most vibrant purple
+        ]
+    };
+
+
     return (
-        <section className="w-full py-24 px-6 bg-transparent text-white" id="skills">
+        <section className="w-full py-24 px-6 bg-transparent text-white pt-20" id="skills">
             <div className="max-w-6xl mx-auto">
                 <div className="mb-16 text-center">
                     <motion.h2
@@ -167,6 +180,44 @@ const Skills = () => {
                         </div>
                     </div>
                 </div>
+
+                {/* GitHub Calendar Section with styled container */}
+                <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="mt-20 bg-zinc-900/60 backdrop-blur-sm rounded-2xl p-8 border border-zinc-800 
+                               hover:border-purple-500/30 transition-all duration-500 shadow-lg hover:shadow-purple-500/10"
+                >
+                    <div className="flex items-center gap-3 mb-8">
+                        <div className="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center">
+                            <SiGithub className="text-2xl text-purple-400" />
+                        </div>
+                        <h3 className="text-2xl font-semibold">GitHub Contributions</h3>
+                    </div>
+                    
+                    <div className="flex justify-center md:justify-start overflow-x-auto pb-4">
+                        <GitHubCalendar 
+                            username="basicallymanny" 
+                            blockSize={15}
+                            blockMargin={5}
+                            theme={githubTheme}
+                            fontSize={12}
+                            hideColorLegend={false}
+                            hideMonthLabels={false}
+                            colorScheme="dark"
+                            labels={{
+                                totalCount: '{{count}} contributions in the last 6 months'
+                            }}
+                            style={{ width: '100%', maxWidth: '100%', height: 'auto' }}
+                        />
+                    </div>
+                    
+                    <p className="text-zinc-400 mt-4 text-center md:text-left">
+                        Consistent contribution reflects my commitment to continuous learning and building.
+                    </p>
+                </motion.div>
             </div>
         </section>
     );
