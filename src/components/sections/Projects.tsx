@@ -5,7 +5,7 @@ import { VscDebugDisconnect } from "react-icons/vsc";
 import { motion } from 'framer-motion';
 
 import GideonImg from '../../../assets/gideon.webp';
-import KamiImg from '../../../assets/KamiSite.webp';   
+import KamiImg from '../../../assets/KamiSite.webp';
 import AlgorithmVisualizerImg from '../../../assets/algovisualizer.webp';
 import BEMAImg from '../../../assets/BEMA.webp';
 
@@ -25,11 +25,23 @@ const Projects = () => {
             retired: false,
         },
         {
+            id: 4,
+            title: "Algorithm Visualizer",
+            description: "An interactive sorting algorithm visualizer built with React, TypeScript, and Framer Motion, featuring smooth animations and real-time visual feedback to help users explore and understand different sorting algorithms.",
+            tags: ["React", "TypeScript", "Framer Motion", "Tailwind CSS", "Vite", "Node.js", "Vercel"],
+            notes: ["Users can choose from Quicksort, Merge Sort, and Insertion Sort, adjust array sizes, and control the speed of the visualization.", "Each algorithm comes with a clear explanation and code examples in multiple programming languages.", "Color-coded, real-time animations highlight the sorting process step by step for better understanding."],
+            githubLink: "https://github.com/BasicallyManny/Algorithm-Visualizer",
+            liveLink: "https://algorithmsvisualizer.vercel.app/",
+            image: AlgorithmVisualizerImg,
+            wip: false,
+            retired: false,
+        },
+        {
             id: 2,
             title: "Kami",
             description: "Kami is a powerful discord bot designed to enhance your Minecraft experience. Kami combines robust database management and intelligent responses.",
             tags: ["Python", "Discord.py", "FastAPI", "MongoDB", "LangChain", "Railway"],
-            notes: ["Integrated LangChain and OpenAI, providing AI-generated Minecraft insights", "Stores and retrieves Minecraft Coordinates within MongoDB to help you navigate the world", "Interactive and user-friendly Discord commands for a seamless Minecraft experience."],
+            notes: ["Integrated LangChain and OLlamma, providing AI-generated Minecraft insights", "Stores and retrieves Minecraft Coordinates within MongoDB to help you navigate the world", "Interactive and user-friendly Discord commands for a seamless Minecraft experience."],
             githubLink: "https://github.com/BasicallyManny/Kami-2.0",
             liveLink: "https://kami-site-one.vercel.app/",
             image: KamiImg,
@@ -47,19 +59,7 @@ const Projects = () => {
             image: BEMAImg,
             wip: false,
             retired: true,
-        },
-        {
-            id: 4,
-            title: "Algorithm Visualizer",
-            description: "An interactive sorting algorithm visualizer built with React, TypeScript, and Framer Motion, featuring smooth animations and real-time visual feedback to help users explore and understand different sorting algorithms.",
-            tags: ["React", "TypeScript", "Framer Motion", "Tailwind CSS", "Vite", "Node.js", "Vercel"],
-            notes: ["Users can choose from Quicksort, Merge Sort, and Insertion Sort, adjust array sizes, and control the speed of the visualization.", "Each algorithm comes with a clear explanation and code examples in multiple programming languages.", "Color-coded, real-time animations highlight the sorting process step by step for better understanding."],
-            githubLink: "https://github.com/BasicallyManny/Algorithm-Visualizer",
-            liveLink: "https://algorithmsvisualizer.vercel.app/",
-            image: AlgorithmVisualizerImg,
-            wip: false,
-            retired: false,
-        },
+        }
     ];
 
     return (
