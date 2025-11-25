@@ -10,29 +10,29 @@ export const Hero = () => {
     // Text animation variants
     const titleVariants = {
         hidden: { opacity: 0, y: 100 },
-        visible: { 
-            opacity: 1, 
+        visible: {
+            opacity: 1,
             y: 0,
-            transition: { 
-                type: "spring", 
-                stiffness: 100, 
+            transition: {
+                type: "spring",
+                stiffness: 100,
                 damping: 10,
-                duration: 0.8 
+                duration: 0.8
             }
         }
     };
 
     const paragraphVariants = {
         hidden: { opacity: 0, y: 20 },
-        visible: { 
-            opacity: 1, 
+        visible: {
+            opacity: 1,
             y: 0,
-            transition: { 
-                type: "spring", 
-                stiffness: 50, 
+            transition: {
+                type: "spring",
+                stiffness: 50,
                 damping: 20,
                 delay: 0.4,
-                duration: 0.8 
+                duration: 0.8
             }
         }
     };
@@ -89,18 +89,18 @@ export const Hero = () => {
                 animate="visible"
             />
 
-            <motion.div 
-                id="hero-content" 
+            <motion.div
+                id="hero-content"
                 className="mx-auto max-w-screen-xl grid grid-cols-1 items-center mt-7 sm:grid-cols-2 h-full relative z-10"
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
             >
-                <motion.div 
-                    id="hero-text" 
+                <motion.div
+                    id="hero-text"
                     className="text-center sm:ml-20 sm:text-left flex flex-col items-center sm:items-start"
                 >
-                    <motion.h1 
+                    <motion.h1
                         className="text-5xl font-bold mb-4 md:justify-center sm:text-6xl"
                         variants={titleVariants}
                     >
@@ -120,8 +120,8 @@ export const Hero = () => {
                             👋
                         </motion.span>
                     </motion.h1>
-                    
-                    <motion.p 
+
+                    <motion.p
                         className="z-10 max-w-prose px-10 text-l mb-6 mt-6 sm:px-0"
                         variants={paragraphVariants}
                     >
@@ -130,14 +130,16 @@ export const Hero = () => {
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.8, duration: 0.8 }}
                         >
-                            Software engineer focused on building fast, intuitive web apps with React, TypeScript, FastAPI, and MongoDB. 
-                            Interested in web development, AI, and scalable systems. Recently exploring AI integration using the LangChain 
-                            framework.
+                            Data-driven professional with experience analyzing financial statements, assessing risk, and validating data
+                            accuracy. Skilled in Python, Google Sheets, and CRM tools to clean data, automate workflows, and produce
+                            clear reports. Strong web development foundation with experience in React and TypeScript. Known for
+                            identifying discrepancies, improving processes, and applying both analytical and technical skills to support
+                            better business decisions
                         </motion.span>
                     </motion.p>
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                     className="relative flex justify-center items-center w-64 h-64 mx-auto z-10"
                     variants={profileContainerVariants}
                 >
@@ -164,7 +166,7 @@ export const Hero = () => {
                     </motion.div>
                 </motion.div>
             </motion.div>
-            
+
             {/* Floating particles effect */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
                 {[...Array(10)].map((_, i) => (
