@@ -80,7 +80,7 @@ export const Hero = () => {
     };
 
     return (
-        <section className="flex flex-col items-center justify-center h-screen text-white my-5 space-between overflow-hidden relative">
+        <section className="flex flex-col items-center justify-center h-screen text-white my-5 space-between overflow-hidden relative pt-10">
             {/* Animated background gradient */}
             <motion.div
                 className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-purple-600/10 rounded-3xl blur-3xl"
