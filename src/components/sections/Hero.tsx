@@ -80,7 +80,7 @@ export const Hero = () => {
     };
 
     return (
-        <section className="flex flex-col items-center justify-center h-screen text-white my-5 space-between overflow-hidden relative pt-10">
+        <section className="flex flex-col items-center justify-center h-screen text-white my-5 space-between overflow-hidden relative">
             {/* Animated background gradient */}
             <motion.div
                 className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-purple-600/10 rounded-3xl blur-3xl"
@@ -91,7 +91,7 @@ export const Hero = () => {
 
             <motion.div
                 id="hero-content"
-                className="mx-auto max-w-screen-xl grid grid-cols-1 items-center mt-7 sm:grid-cols-2 h-full relative z-10"
+                className="mx-auto max-w-screen-xl grid grid-cols-1 items-center mt-30 sm:grid-cols-2 h-full relative z-10"
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
@@ -140,7 +140,7 @@ export const Hero = () => {
                 </motion.div>
 
                 <motion.div
-                    className="relative flex justify-center items-center w-64 h-64 mx-auto z-10"
+                    className="relative hidden justify-center items-center w-64 h-64 mx-auto z-10 sm:flex"
                     variants={profileContainerVariants}
                 >
                     {/* Profile Image with OrbitingIcon */}

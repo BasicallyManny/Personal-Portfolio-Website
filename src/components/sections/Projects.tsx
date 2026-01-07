@@ -36,7 +36,7 @@ const Projects = () => {
     ];
 
     return (
-        <section id="projects" className="py-20 bg-transparent min-h-screen">
+        <section id="projects">
             <motion.div
                 className="container border mx-auto px-4 sm:px-8"
                 initial={{ opacity: 0 }}
