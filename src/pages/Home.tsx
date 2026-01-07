@@ -6,34 +6,34 @@ import { motion } from "framer-motion";
 
 export const Home = () => {
     return (
-        <main>
-            <section>
+        <main className="relative">
+            <section className="relative z-10">
                 <Hero />
             </section>
             <motion.section
-                className="mt-10"
+                className="relative z-10 py-20"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                viewport={{ once: false }} // This ensures it triggers when it enters and exits the viewport
+                viewport={{ once: false }}
             >
                 <Projects />
             </motion.section>
             <motion.section
-                className="mt-10"
+                className="relative z-10 py-20"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                viewport={{ once: false }} // Ensures the effect triggers as it scrolls in and out of view
+                viewport={{ once: false }}
             >
                 <Skills />
             </motion.section>
             <motion.section
-                className="mt-10"
+                className="relative z-10 py-20"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                viewport={{ once: false }} // Ensures the effect triggers as it scrolls in and out of view
+                viewport={{ once: false }}
             >
                 <Footer />
             </motion.section>
