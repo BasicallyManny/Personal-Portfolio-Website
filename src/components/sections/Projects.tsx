@@ -3,11 +3,8 @@ import { FaTools } from "react-icons/fa";
 import { VscDebugDisconnect } from "react-icons/vsc";
 
 import { motion } from 'framer-motion';
-
 import GideonImg from '../../../assets/gideon.webp';
-import KamiImg from '../../../assets/KamiSite.webp';
 import AlgorithmVisualizerImg from '../../../assets/algovisualizer.webp';
-import BEMAImg from '../../../assets/BEMA.webp';
 
 
 const Projects = () => {
@@ -25,7 +22,7 @@ const Projects = () => {
             retired: false,
         },
         {
-            id: 4,
+            id: 2,
             title: "Algorithm Visualizer",
             description: "An interactive sorting algorithm visualizer built with React, TypeScript, and Framer Motion, featuring smooth animations and real-time visual feedback to help users explore and understand different sorting algorithms.",
             tags: ["React", "TypeScript", "Framer Motion", "Tailwind CSS", "Vite", "Node.js", "Vercel"],
@@ -36,30 +33,6 @@ const Projects = () => {
             wip: false,
             retired: false,
         },
-        {
-            id: 2,
-            title: "Kami",
-            description: "Kami is a powerful discord bot designed to enhance your Minecraft experience. Kami combines robust database management and intelligent responses.",
-            tags: ["Python", "Discord.py", "FastAPI", "MongoDB", "LangChain", "Railway"],
-            notes: ["Integrated LangChain and OLlamma, providing AI-generated Minecraft insights", "Stores and retrieves Minecraft Coordinates within MongoDB to help you navigate the world", "Interactive and user-friendly Discord commands for a seamless Minecraft experience."],
-            githubLink: "https://github.com/BasicallyManny/Kami-2.0",
-            liveLink: "https://kami-site-one.vercel.app/",
-            image: KamiImg,
-            wip: false,
-            retired: true,
-        },
-        {
-            id: 3,
-            title: "BEMA",
-            description: "BEMA is a chatbot that can converse with a person and help with various tasks similar to chatGPT. However, BEMA offers a unique feature tailored to job seekers: it can create individualized resumes based on the job listings furnished by the user.",
-            tags: ["Python", "LangChain", "Streamlit", "MongoDB", "OpenAI", "TavilyAI"],
-            notes: ["Interactive Chatbot for Personalized Resume Writing", "Web Scraping for Job and LinkedIn Data", "Integrated Web Search for Data Enrichment"],
-            githubLink: "https://github.com/Teccon1998/GenAIAssistant",
-            liveLink: "https://github.com/Teccon1998/GenAIAssistant",
-            image: BEMAImg,
-            wip: false,
-            retired: true,
-        }
     ];
 
     return (
