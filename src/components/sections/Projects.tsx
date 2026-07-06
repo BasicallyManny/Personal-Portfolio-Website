@@ -81,13 +81,13 @@ const Projects = () => {
                                 {/* WIP Banner - show only if project.wip is true */}
                                 {project.wip && (
                                     <motion.div
-                                        className="flex items-center gap-2 absolute top-10 right-7 bg-amber-600 text-white px-4 py-1.5 text-sm font-medium rounded-md shadow-lg transform rotate-2"
+                                        className="flex items-center gap-2 absolute top-10 right-7 bg-red-600 text-white px-4 py-1.5 text-sm font-medium rounded-md shadow-lg transform rotate-2"
                                         initial={{ x: 20, opacity: 0 }}
                                         animate={{ x: 0, opacity: 1 }}
                                         transition={{ delay: 0.3, duration: 0.4 }}
                                     >
                                         <FaTools className="text-white" />
-                                        <span>In Active Development</span>
+                                        <span>Redacted</span>
                                     </motion.div>
                                 )}
                                 {/* RETIRED BANNER */}

@@ -1,9 +1,8 @@
 import {
     SiTypescript, SiNodedotjs, SiPostgresql, SiMongodb, SiGithub,
     SiReact, SiTailwindcss, SiFigma, SiFramer,
-    SiPhp, SiBootstrap,
-    SiDocker, SiVercel, SiGooglecloud, SiFastapi,
-    SiLangchain, SiMysql, SiExpress, SiRailway, SiPython
+    SiDocker, SiVercel, SiGooglecloud, SiFastapi, SiMysql, SiExpress, SiRailway, SiPython,
+    SiNextdotjs
 } from 'react-icons/si';
 
 import { motion } from 'framer-motion';
@@ -19,20 +18,17 @@ const Skills = () => {
         { name: "PostgreSQL", icon: <SiPostgresql />, color: "text-blue-600", bgColor: "bg-white" },
         { name: "MySQL", icon: <SiMysql />, color: "text-blue-500" },
         { name: "MongoDB", icon: <SiMongodb />, color: "text-green-600", bgColor: "bg-white" },
-        { name: "GitHub", icon: <SiGithub />, color: "text-white", bgColor: "bg-black" },
         { name: "FastAPI", icon: <SiFastapi />, color: "text-blue-500" },
         { name: "Express", icon: <SiExpress />, color: "text-gray-200" },
-        { name: "LangChain", icon: <SiLangchain />, color: "text-green-500" },
     ];
 
     // Frontend technologies with icons
     const frontendTech = [
         { name: "React", icon: <SiReact />, color: "text-blue-400" },
+        {name: "Next.js", icon: <SiNextdotjs />, color: "text-white"},
         { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "text-cyan-400" },
         { name: "Figma", icon: <SiFigma />, color: "text-purple-500" },
         { name: "Framer", icon: <SiFramer />, color: "text-blue-500" },
-        { name: "PHP", icon: <SiPhp />, color: "text-purple-500" },
-        { name: "Bootstrap", icon: <SiBootstrap />, color: "text-purple-600" },
     ];
 
     // Cloud & DevOps technologies with icons
@@ -40,6 +36,7 @@ const Skills = () => {
         { name: "Docker", icon: <SiDocker />, color: "text-blue-500" },
         { name: "Vercel", icon: <SiVercel />, color: "text-gray-200" },
         { name: "Google Cloud", icon: <SiGooglecloud />, color: "text-blue-400" },
+         { name: "GitHub", icon: <SiGithub />, color: "text-white", bgColor: "bg-black" },
         { name: "Railway", icon: <SiRailway />, color: "text-purple-500" }
     ];
 
@@ -98,14 +95,13 @@ const Skills = () => {
         );
     };
 
-    // Custom theme for GitHub calendar that follows the requirement of exactly 5 colors
     const githubTheme = {
         dark: [
-            '#262626',          // No contributions - zinc-800
-            '#6366f180',        // Level 1 - purple with transparency 
-            '#8b5cf680',        // Level 2 - purple with more opacity
-            '#a855f780',        // Level 3 - even more vibrant purple
-            '#d946ef80'         // Level 4 - most vibrant purple
+            '#262626',          
+            '#6366f180',       
+            '#8b5cf680',        
+            '#a855f780',        
+            '#d946ef80'         
         ]
     };
 
