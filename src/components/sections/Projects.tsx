@@ -5,12 +5,25 @@ import { VscDebugDisconnect } from "react-icons/vsc";
 import { motion } from 'framer-motion';
 import GideonImg from '../../../assets/gideon.webp';
 import AlgorithmVisualizerImg from '../../../assets/algovisualizer.webp';
+import ThrottleIQImf from '../../../assets/ThrottleIQNYC.webp'
 
 
 const Projects = () => {
     const projects = [
         {
             id: 1,
+            title: "ThrottleIQNYC",
+            description: "ThrottleIQ NYC transforms three years of NYC motorcycle crash data into an interactive incident map, real-time safety analytics, and instant motorcycle specifications.",
+            tags: ["React", "TypeScript", "Python", "Tailwind CSS", "Vite", "Node.js", "FastAPI", "PostgresSQL", "Vercel", "Railway"],
+            notes: ["Over 200k accidents analyzed", "Interactive crash-density heatmap using MapLibre GL JS and deck.gl to visualize 10,000+ geolocated collision records", "Automated ETL pipeline handling data ingestion, cleaning, and normalization into a relational schema with monthly scheduled reloads via Railway cron jobs processing 20000+ records per run"],
+            githubLink: "https://github.com/BasicallyManny/ThrottleIQ",
+            liveLink: "https://throttle-iq.vercel.app/",
+            image: ThrottleIQImf,
+            wip: true,
+            retired: false,
+        },
+        {
+            id: 2,
             title: "Gideon",
             description: "Full-stack job application tracker to manage and monitor applications with ease. Includes analytics for insights into preferences and success rates, helping you stay organized and boost job search efficiency.",
             tags: ["React", "TypeScript", "Python", "Tailwind CSS", "Vite", "Node.js", "FastAPI", "MongoDB", "Vercel", "Google Cloud"],
@@ -18,11 +31,11 @@ const Projects = () => {
             githubLink: "https://github.com/BasicallyManny/Gideon/",
             liveLink: "https://gideon-nine.vercel.app/",
             image: GideonImg,
-            wip: true,
-            retired: false,
+            wip: false,
+            retired: true,
         },
         {
-            id: 2,
+            id: 1,
             title: "Algorithm Visualizer",
             description: "An interactive sorting algorithm visualizer built with React, TypeScript, and Framer Motion, featuring smooth animations and real-time visual feedback to help users explore and understand different sorting algorithms.",
             tags: ["React", "TypeScript", "Framer Motion", "Tailwind CSS", "Vite", "Node.js", "Vercel"],
@@ -87,7 +100,7 @@ const Projects = () => {
                                         transition={{ delay: 0.3, duration: 0.4 }}
                                     >
                                         <FaTools className="text-white" />
-                                        <span>Redacted</span>
+                                        <span>Work in progress</span>
                                     </motion.div>
                                 )}
                                 {/* RETIRED BANNER */}
